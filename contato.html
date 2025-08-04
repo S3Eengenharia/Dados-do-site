@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="./styles/Css/components.css">
     <link rel="stylesheet" href="./styles/Css/animations.css">
 
+    <link rel="stylesheet" href="./styles/Css/sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/js/tailwind-config.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Contato S3E Engenharia</title>
@@ -17,6 +21,7 @@
 
 <!-- Script do Menu Mobile -->
 <script src="./assets/js/menu-mobile.js"></script>
+<script src="./assets/js/sidebar.js"></script>
 
 <body class="font-poppins bg-lightGray">
     <!-- Header (idêntico ao index.html) -->
@@ -27,28 +32,83 @@
                 <a href="index.html" class="text-2xl font-bold text-primary">S3E Engenharia</a>
 
                 <!-- Menu Desktop (hidden em mobile) -->
-                <ul id="desktop-menu" class="hidden md:flex space-x-8">
-                    <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
-                    <li><a href="Sobre.html" class="hover:text-primary transition">Sobre Nós</a></li>
-                    <li><a href="contato.html" class="hover:text-primary transition">Contato</a></li>
-                    <li><a href="servicos.html" class="hover:text-primary transition">Serviços</a></li>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="hover:text-primary transition flex items-center gap-2">
+                            <i class="fas fa-home"></i> Home
+                        </a></li>
+                    <li><a href="Sobre.html" class="hover:text-primary transition">Sobre Nós <i
+                                class="fas fa-info-circle"></i></a></li>
+                    <li><a href="contato.html" class="hover:text-primary transition">Contato <i
+                                class="fas fa-envelope"></i></a></li>
+                    <li><a href="servicos.html" class="hover:text-primary transition">Serviços <i
+                                class="fas fa-tools"></i></a></li>
+                    <li><a href="https://www.instagram.com/s3eengenhariaeletrica/" class="hover:text-primary transition"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="https://www.facebook.com/s3eengenharia" class="hover:text-primary transition"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
                 </ul>
 
-                <!-- Botão Mobile (só aparece em telas pequenas) -->
-                <button id="mobile-menu-button" class="md:hidden text-primary text-2xl focus:outline-none">
+                <!-- Botão Mobile -->
+                <button id="sidebar-toggle" class="md:hidden text-primary text-2xl focus:outline-none">
                     ☰
                 </button>
-            </div>
 
-            <!-- Menu Mobile (hidden por padrão) -->
-            <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
-                <li><a href="index.html" class="block hover:text-primary transition">Home</a></li>
-                <li><a href="Sobre.html" class="hover:text-primary transition">Sobre Nós</a></li>
-                <li><a href="servicos.html" class="block hover:text-primary transition">Serviços</a></li>
-                <li><a href="contato.html" class="block hover:text-primary transition">Contato</a></li>
-            </ul>
-        </nav>
+                <!-- Sidebar -->
+                <div id="sidebar-mobile"
+                    class="fixed inset-y-0 left-0 w-64 bg-white shadow-xl transform -translate-x-full transition-all duration-300 ease-in-out z-50">
+                    <div class="p-4 flex justify-end">
+                        <button id="sidebar-close" class="text-primary text-2xl focus:outline-none">✕</button>
+                    </div>
+                    <nav class="mt-8">
+                        <ul class="space-y-4 px-4">
+                            <li>
+                                <a href="index.html"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fas fa-home w-6 text-center"></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="servicos.html"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>Serviços</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contato.html"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fas fa-envelope w-6 text-center"></i>
+                                    <span>Contato</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/554730838361/"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fab fa-whatsapp w-6 text-center"></i>
+                                    <span>Tire Dúvidas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/s3eengenhariaeletrica/"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fab fa-instagram w-6 text-center"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/s3eengenharia"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fab fa-facebook w-6 text-center"></i>
+                                    <span>Facebook</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Overlay -->
+                <div id="sidebar-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
     </header>
+
 
     <!-- Conteúdo Página Sobre -->
     

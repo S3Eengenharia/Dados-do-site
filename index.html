@@ -25,6 +25,10 @@
         content="engenharia elétrica, serviços elétricos, instalações elétricas, manutenção elétrica, projetos elétricos, consultoria técnica, laudos técnicos, auditoria energética, quadros elétricos, eficiência energética, energia solar">
     <meta name="author" content="s3e Engenharia">
     <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/sidebar.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -36,6 +40,7 @@
 </head>
 <!-- Script do Menu Mobile -->
 <script src="./assets/js/menu-mobile.js"></script>
+<script src="./assets/js/sidebar.js"></script>
 
 <body class="font-poppins bg-lightGray text-gray-800">
     <!-- Header -->
@@ -43,51 +48,159 @@
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
-                <a href="index.html" class="text-2xl font-bold text-primary">S3E Engenharia</a>
+                <a href="index.html" class="text-4xl font-bold text-primary">
+                    <picture><img src="./src/images/logo.png" alt="S3E Engenharia" class="h-20"></picture>
+                </a>
 
-                <!-- Menu Desktop (hidden em mobile) -->
-                <ul id="desktop-menu" class="hidden md:flex space-x-10">
-                    <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
-                    <li><a href="Sobre.html" class="hover:text-primary transition">Sobre Nós</a></li>
-                    <li><a href="contato.html" class="hover:text-primary transition">Contato</a></li>
-                    <li><a href="servicos.html" class="hover:text-primary transition">Serviços</a></li>
+                <!-- Menu Desktop -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="hover:text-primary transition flex items-center gap-2">
+                            <i class="fas fa-home"></i> Home
+                        </a></li>
+                    <li><a href="Sobre.html" class="hover:text-primary transition">Sobre Nós <i
+                                class="fas fa-info-circle"></i></a></li>
+                    <li><a href="contato.html" class="hover:text-primary transition">Contato <i
+                                class="fas fa-envelope"></i></a></li>
+                    <li><a href="servicos.html" class="hover:text-primary transition">Serviços <i
+                                class="fas fa-tools"></i></a></li>
+                    <li><a href="https://www.instagram.com/s3eengenhariaeletrica/" class="hover:text-primary transition"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+                    <li><a href="https://www.facebook.com/s3eengenharia" class="hover:text-primary transition"><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
                 </ul>
 
-                <!-- Botão Mobile (só aparece em telas pequenas) -->
-                <button id="mobile-menu-button" class="md:hidden text-primary text-2xl focus:outline-none">
+                <!-- Botão Mobile -->
+                <button id="sidebar-toggle" class="md:hidden text-primary text-2xl focus:outline-none">
                     ☰
                 </button>
-            </div>
 
-            <!-- Menu Mobile (hidden por padrão) -->
-            <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
-                <li><a href="index.html" class="block hover:text-primary transition">Home</a></li>
-                <li><a href="servicos.html" class="block hover:text-primary transition">Serviços</a></li>
-                <li><a href="contato.html" class="block hover:text-primary transition">Contato</a></li>
-            </ul>
-        </nav>
+                <!-- Sidebar -->
+                <div id="sidebar-mobile"
+                    class="fixed inset-y-0 left-0 w-64 bg-white shadow-xl transform -translate-x-full transition-all duration-300 ease-in-out z-50">
+                    <div class="p-4 flex justify-end">
+                        <button id="sidebar-close" class="text-primary text-2xl focus:outline-none">✕</button>
+                    </div>
+                    <nav class="mt-8">
+                        <ul class="space-y-4 px-4">
+                            <li>
+                                <a href="index.html"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fas fa-home w-6 text-center"></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Sobre.html"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>Sobre Nós</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="servicos.html"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fas fa-tools w-6 text-center"></i>
+                                    <span>Serviços</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contato.html"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fas fa-envelope w-6 text-center"></i>
+                                    <span>Contato</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/554730838361/"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fab fa-whatsapp w-6 text-center"></i>
+                                    <span>Tire Dúvidas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/s3eengenhariaeletrica/"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fab fa-instagram w-6 text-center"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/s3eengenharia"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fab fa-facebook w-6 text-center"></i>
+                                    <span>Facebook</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Overlay -->
+                <div id="sidebar-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
     </header>
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-br from-primary to-primaryDark text-white py-20 px-6">
         <div class="container mx-auto text-center max-w-4xl animate-fade-in">
             <h1 class="text-4xl md:text-5xl font-bold mb-6">A Energia que Impulsiona Seu Negócio</h1>
-            <p class="text-xl md:text-2xl opacity-90 mb-8">Soluções completas em engenharia elétrica de baixa e média
+            <p class="text-xl md:text-2xl opacity-90 mb-8">Soluções completas em engenharia elétrica de
+                baixa e média
                 tensão.</p>
             <a href="#contato"
                 class="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg hover:shadow-xl">
                 Solicitar Orçamento
             </a>
-            <button class="inline-block bg-green-500 text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg hover:shadow-xl"><a href="https://wa.me/554730838361/" target="_blank">
-                Fale Conosco
-            </a></button>
+            <button
+                class="inline-block bg-green-500 text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg hover:shadow-xl"><a
+                    href="https://wa.me/554730838361/" target="_blank">
+                    Fale Conosco
+                </a></button>
         </div>
     </section>
+    <!-- Sobre Nós -->
+    <article id="sobre" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://placeholder.com/600x400?text=Equipe+S3E" alt="Equipe S3E"
+                        class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Sobre a S3E Engenharia Elétrica</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        A S3E é sua parceira ideal para soluções completas e seguras em energia elétrica. Com anos de
+                        experiência e uma equipe qualificada, entregamos projetos que combinam inovação, eficiência e
+                        segurança.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Excelência técnica e profissionalismo</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Compromisso e Segurança</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Inovação e Tecnologia</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check text-accent mt-1"></i>
+                            <span>Eficiência e Sustentabilidade</span>
+                        </li>
+                        <!-- Adicione outros diferenciais -->
+                    </ul>
+                    <a href="/servicos.html" class="text-accent font-semibold hover:underline">Conheça nossos serviços →</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
 
     <!-- Serviços -->
     <section id="servicos" class="container mx-auto py-16 px-6">
         <h2 class="text-3xl font-bold text-center mb-12 text-primary">Nossos Serviços</h2>
-        <p class="text-center max-w-2xl mx-auto mb-12 text-darkGray">Da concepção à manutenção, a S3E oferece um
+        <p class="text-center max-w-2xl mx-auto mb-12 text-darkGray">Da concepção à manutenção, a S3E
+            oferece um
             portfólio completo para demandas complexas.</p>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -102,8 +215,8 @@
             <!-- Card 2 -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-3 text-primary">Manutenção Elétrica</h3>
-                    <p class="text-gray-600">Prevenção e correção de falhas em sistemas elétricos.</p>
+                    <h3 class="text-xl font-bold mb-3 text-primary">Energia Solar</h3>
+                    <p class="text-gray-600">Soluções sustentáveis para geração de energia limpa.</p>
                 </div>
             </div>
 
@@ -111,11 +224,63 @@
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-3 text-primary">Projetos Elétricos</h3>
-                    <p class="text-gray-600">Elaboração conforme normas técnicas e necessidade do cliente.</p>
+                    <p class="text-gray-600">Elaboração conforme normas técnicas e necessidade do cliente.
+                    </p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 text-primary">Consultoria Técnica</h3>
+                    <p class="text-gray-600">Análise e otimização de sistemas elétricos para eficiência máxima.
+                    </p>
+                </div>
+        </div>
+
+            <!-- Card 5 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 text-primary">Laudos Técnicos</h3>
+                    <p class="text-gray-600">Avaliações detalhadas para garantir conformidade e segurança.</p>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 text-primary">Quadros Elétricos</h3>
+                    <p class="text-gray-600">Projetos e instalações de quadros elétricos personalizados.</p>
+                </div>
+            </div>  
+    </section>
+
+    <!-- Diferenciais -->
+     <aside class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12 ">Nossos Diferenciais</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="p-6">
+                    <i class="fas fa-award text-4xl mb-4 text-accent"></i>
+                    <h3 class="text-xl font-bold mb-2">Soluções Sob Medida</h3>
+                    <p>abordagem é consultiva e personalizada, buscando entender a fundo sua demanda para desenvolver a melhor estratégia, otimizando recursos e garantindo resultados que superam expectativas.</p>
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-award text-4xl mb-4 text-accent"></i>
+                    <h3 class="text-xl font-bold mb-2">Segurança em Primeiro Lugar:</h3>
+                    <p>Cada projeto, laudo ou manutenção é planejado e executado com rigor para garantir a proteção de pessoas e patrimônio.</p>
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-award text-4xl mb-4 text-accent"></i>
+                    <h3 class="text-xl font-bold mb-2">Compromisso com a Satisfação do Cliente</h3>
+                    <p>Nosso objetivo é construir parcerias de longo prazo, baseadas na qualidade dos nossos serviços e na sua total satisfação.</p>
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-award text-4xl mb-4 text-accent"></i>
+                    <h3 class="text-xl font-bold mb-2">Atendimento Personalizado:</h3>
+                    <p>Equipe dedicada a entender e atender às necessidades específicas de cada cliente.</p>
                 </div>
             </div>
         </div>
-    </section>
+     </aside>
 
     <!-- Sobre Nós -->
     <section id="sobre" class="bg-white py-16 px-6">
@@ -150,9 +315,18 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-secondary text-white py-8 px-6">
-        <div class="container mx-auto text-center">
-            <p>&copy; 2025 S3E Engenharia. Todos os direitos reservados.</p>
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="./src/images/logo.png" alt="S3E Engenharia" class="h-14 mb-8">
+                    <p>Soluções completas em engenharia elétrica.</p>
+                </div>
+                <!-- Adicione outras colunas -->
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 S3E Engenharia Elétrica. Todos os direitos reservados.</p>
+            </div>
         </div>
     </footer>
 </body>
