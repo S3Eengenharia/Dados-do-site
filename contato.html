@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles/Css/reset.css">
+    <link rel="stylesheet" href="./styles/Css/index.css">
+    <link rel="stylesheet" href="./styles/Css/components.css">
+    <link rel="stylesheet" href="./styles/Css/animations.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwind-config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Contato S3E Engenharia</title>
+</head>
+
+<!-- Script do Menu Mobile -->
+<script src="./assets/js/menu-mobile.js"></script>
+
+<body class="font-poppins bg-lightGray">
+    <!-- Header (idêntico ao index.html) -->
+     <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-primary">S3E Engenharia</a>
+
+                <!-- Menu Desktop (hidden em mobile) -->
+                <ul id="desktop-menu" class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+                    <li><a href="Sobre.html" class="hover:text-primary transition">Sobre Nós</a></li>
+                    <li><a href="contato.html" class="hover:text-primary transition">Contato</a></li>
+                    <li><a href="servicos.html" class="hover:text-primary transition">Serviços</a></li>
+                </ul>
+
+                <!-- Botão Mobile (só aparece em telas pequenas) -->
+                <button id="mobile-menu-button" class="md:hidden text-primary text-2xl focus:outline-none">
+                    ☰
+                </button>
+            </div>
+
+            <!-- Menu Mobile (hidden por padrão) -->
+            <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
+                <li><a href="index.html" class="block hover:text-primary transition">Home</a></li>
+                <li><a href="Sobre.html" class="hover:text-primary transition">Sobre Nós</a></li>
+                <li><a href="servicos.html" class="block hover:text-primary transition">Serviços</a></li>
+                <li><a href="contato.html" class="block hover:text-primary transition">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Página Sobre -->
+    
+
+    <footer class="bg-secondary text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 S3E Engenharia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

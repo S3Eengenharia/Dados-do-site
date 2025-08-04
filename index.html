@@ -1,64 +1,160 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="index.css">
+
+    <!-- 2. CSS Modular -->
+    <link rel="stylesheet" href="./styles/Css/reset.css">
+    <link rel="stylesheet" href="./styles/Css/index.css">
+    <link rel="stylesheet" href="./styles/Css/components.css">
+    <link rel="stylesheet" href="./styles/Css/animations.css">
+
+    <!-- CDN Tailwind CSS + Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração Externa -->
+    <script src="./assets/js/tailwind-config.js"></script>
+
     <link rel="icon" href="##" type="image/x-icon">
     <link rel="apple-touch-icon" href="##">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="s3e Engenharia - Sua solução completa para serviços de engenharia elétrica.">
-    <meta name="keywords" content="engenharia elétrica, serviços elétricos, instalações elétricas, manutenção elétrica, projetos elétricos, consultoria técnica, laudos técnicos, auditoria energética, quadros elétricos, eficiência energética, energia solar">
+    <meta name="theme-color" content="#e13852">
+    <meta name="description" content="s3e Engenharia - Soluções completa de manutenção em engenharia elétrica.">
+    <meta name="keywords"
+        content="engenharia elétrica, serviços elétricos, instalações elétricas, manutenção elétrica, projetos elétricos, consultoria técnica, laudos técnicos, auditoria energética, quadros elétricos, eficiência energética, energia solar">
     <meta name="author" content="s3e Engenharia">
     <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="canonical" href="https://www.s3eengenharia.com.br/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="##">
-    <meta property="og:title" content="s3e Engenharia">
-
     <title>s3e Engenharia</title>
 </head>
-<body>
-    <h1>S3E Engenharia Elétrica: A Energia que Impulsiona Seu Negócio</h1>
-    <p>Segurança, inovação e eficiência em cada projeto. Somos sua parceira completa em soluções elétricas de baixa e média tensão.</p>
-    <nav>
-        <ul>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#sobre">Sobre Nós</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
-    <section id="servicos">
-        <h2>Serviços</h2>
-        <p>Da concepção à manutenção, a S3E oferece um portfólio completo de serviços para atender às demandas mais complexas do mercado. Confira como podemos te ajudar:</p>
-        <ul>
-            <li>Instalações Elétricas</li>
-            <li>Manutenção Elétrica</li>
-            <li>Projetos Elétricos</li>
-            <li>Consultoria Técnica</li>
-            <li>Laudos Técnicos</li>
-            <li>Auditoria Energética</li>
-            <li>Quadros de Distribuição</li>
-            <li>Quadros de Comandos</li>
-            <li>Projetos de Eficiência Energética</li>
-            <li>Energia Solar</li>            
-        </ul>
-    </section>
-    
-    <section id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Somos uma empresa especializada em serviços de engenharia elétrica, com anos de experiência no mercado.</p>
+<!-- Script do Menu Mobile -->
+<script src="./assets/js/menu-mobile.js"></script>
+
+<body class="font-poppins bg-lightGray text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-bold text-primary">S3E Engenharia</a>
+
+                <!-- Menu Desktop (hidden em mobile) -->
+                <ul id="desktop-menu" class="hidden md:flex space-x-10">
+                    <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
+                    <li><a href="Sobre.html" class="hover:text-primary transition">Sobre Nós</a></li>
+                    <li><a href="contato.html" class="hover:text-primary transition">Contato</a></li>
+                    <li><a href="servicos.html" class="hover:text-primary transition">Serviços</a></li>
+                </ul>
+
+                <!-- Botão Mobile (só aparece em telas pequenas) -->
+                <button id="mobile-menu-button" class="md:hidden text-primary text-2xl focus:outline-none">
+                    ☰
+                </button>
+            </div>
+
+            <!-- Menu Mobile (hidden por padrão) -->
+            <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
+                <li><a href="index.html" class="block hover:text-primary transition">Home</a></li>
+                <li><a href="servicos.html" class="block hover:text-primary transition">Serviços</a></li>
+                <li><a href="contato.html" class="block hover:text-primary transition">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary to-primaryDark text-white py-20 px-6">
+        <div class="container mx-auto text-center max-w-4xl animate-fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">A Energia que Impulsiona Seu Negócio</h1>
+            <p class="text-xl md:text-2xl opacity-90 mb-8">Soluções completas em engenharia elétrica de baixa e média
+                tensão.</p>
+            <a href="#contato"
+                class="inline-block bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg hover:shadow-xl">
+                Solicitar Orçamento
+            </a>
+            <button class="inline-block bg-green-500 text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg hover:shadow-xl"><a href="https://wa.me/554730838361/" target="_blank">
+                Fale Conosco
+            </a></button>
+        </div>
     </section>
 
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Para mais informações, entre em contato conosco pelo e-mail: <a href="mailto:contato@s3eengenharia.com.br">contato@s3eengenharia.com</a></p>
+    <!-- Serviços -->
+    <section id="servicos" class="container mx-auto py-16 px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 text-primary">Nossos Serviços</h2>
+        <p class="text-center max-w-2xl mx-auto mb-12 text-darkGray">Da concepção à manutenção, a S3E oferece um
+            portfólio completo para demandas complexas.</p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 text-primary">Instalações Elétricas</h3>
+                    <p class="text-gray-600">Soluções seguras e eficientes para sua infraestrutura.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 text-primary">Manutenção Elétrica</h3>
+                    <p class="text-gray-600">Prevenção e correção de falhas em sistemas elétricos.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-3 text-primary">Projetos Elétricos</h3>
+                    <p class="text-gray-600">Elaboração conforme normas técnicas e necessidade do cliente.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 s3e Engenharia. Todos os direitos reservados.</p>
+    <!-- Sobre Nós -->
+    <section id="sobre" class="bg-white py-16 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-8 text-primary">Sobre Nós</h2>
+            <div class="prose prose-lg mx-auto">
+                <p>Somos uma empresa especializada em serviços de engenharia elétrica, combinando:</p>
+                <ul class="list-disc pl-5">
+                    <li>Anos de experiência no mercado</li>
+                    <li>Equipe de engenheiros altamente qualificados</li>
+                    <li>Tecnologia de ponta em todos os projetos</li>
+                    <li>Compromisso com segurança e eficiência</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="bg-lightGray py-16 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-8 text-primary">Contato</h2>
+            <div class="bg-white rounded-xl shadow-md p-8 max-w-md mx-auto">
+                <p class="mb-6 text-center">Entre em contato para orçamentos ou dúvidas:</p>
+                <div class="text-center">
+                    <a href="mailto:contato@s3eengenharia.com.br"
+                        class="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primaryDark transition duration-300">
+                        contato@s3eengenharia.com.br
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-8 px-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 S3E Engenharia. Todos os direitos reservados.</p>
+        </div>
     </footer>
-    
 </body>
+
 </html>

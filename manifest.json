@@ -1,0 +1,22 @@
+{
+  "name": "s3e Engenharia",
+  "short_name": "s3e",
+  "description": "Soluções completas para serviços de engenharia elétrica.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e13852",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "src/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "src/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
