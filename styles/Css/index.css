@@ -35,3 +35,48 @@ h1, h2, h3, h4 {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+footer {
+    background-image: radial-gradient(circle at 75% 30%, rgba(30, 56, 82, 0.15) 0%, transparent 50%);
+}
+
+ .service-photo {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 25px 50px -12px rgba(30, 56, 82, 0.25);
+        }
+        
+        .service-photo::after {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            background: #e13852;
+            opacity: 0.2;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .service-photo::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: #1e3852;
+            opacity: 0.1;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
