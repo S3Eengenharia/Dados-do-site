@@ -2,6 +2,95 @@
 <html lang="pt-BR" class="scroll-smooth">
 
 <head>
+    <!-- Meta Tags Básicas -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P8RHF6S5');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- SEO Primário -->
+    <title>S3E Engenharia Elétrica | Projetos Elétricos e Energia Solar em SC</title>
+    <meta name="description"
+        content="Soluções em projetos elétricos, energia solar e eficiência energética em Santa Catarina.">
+    <link rel="canonical" href="https://www.s3eengenharia.com.br/" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/images/my-favicon.ico/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/images/my-favicon.ico/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/images/my-favicon.ico/favicon/favicon.svg">
+    <link rel="manifest" href="./src/images/my-favicon.ico/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./src/images/my-favicon.ico/favicon/favicon.svg" color="#1e3852">
+    <meta name="msapplication-TileColor" content="#1e3852">
+    <meta name="theme-color" content="#1e3852">
+
+    <!-- Verificação Google Search Console -->
+    <meta name="google-site-verification" content="COLOQUE_SEU_CODIGO_AQUI" />
+
+    <!-- Meta Tags Sociais (Open Graph) -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="S3E Engenharia Elétrica | Soluções em Projetos e Manutenções elétricas em SC">
+    <meta property="og:description"
+        content="Projetos elétricos de baixa e média tensão, residenciais e industriais com garantia de segurança e eficiência energética.">
+    <meta property="og:image" content="https://www.s3eengenharia.com.br/assets/images/og-image.png">
+    <meta property="og:url" content="https://www.s3eengenharia.com.br/">
+    <meta property="og:site_name" content="S3E Engenharia">
+    <meta property="og:image" content="https://www.s3eengenharia.com.br/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="fb:app_id" content="SEU_APP_ID_FACEBOOK">
+
+    <!-- Schema.org (Dados Estruturados) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ElectricalBusiness",
+        "name": "S3E Engenharia Elétrica",
+        "image": "https://www.s3eengenharia.com.br/assets/images/logo.png",
+        "@id": "https://www.s3eengenharia.com.br/",
+        "url": "https://www.s3eengenharia.com.br/",
+        "telephone": "+554730838361",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. Blumenau, 1622 - Barra do Rio, Itajaí - SC, 88305-104",
+            "addressLocality": "Itajaí",
+            "addressRegion": "SC",
+            "postalCode": "88305-104",
+            "addressCountry": "BR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-26.891301285910547",
+            "longitude": "-48.67625098975925"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+        },
+        "sameAs": [
+            "https://www.facebook.com/s3eengenharia",
+            "https://www.instagram.com/s3eengenhariaeletrica/"
+        ]
+    }
+    </script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./styles/Css/reset.css">
     <link rel="stylesheet" href="./styles/Css/index.css">
@@ -22,7 +111,101 @@
         content="engenharia elétrica, serviços elétricos, instalações elétricas, manutenção elétrica, projetos elétricos, consultoria técnica, laudos técnicos, auditoria energética, quadros elétricos, eficiência energética, energia solar">
     <meta name="author" content="S3E Engenharia">
 </head>
+<style>
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
 
+    .animate-fade-in-down {
+        animation: fadeInDown 0.8s ease-out forwards;
+    }
+
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-bounce {
+        animation: bounce 2s infinite;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+
+        40% {
+            transform: translateY(-20px);
+        }
+
+        60% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .btn-primary {
+        background-color: var(--color-accent);
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: var(--color-accent-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+        background-color: transparent;
+        border: 2px solid var(--color-accent);
+        color: var(--color-accent);
+        transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+        background-color: var(--color-accent);
+        color: white;
+        transform: translateY(-2px);
+    }
+</style>
 <!-- Script do Menu Mobile -->
 <script src="./assets/js/menu-mobile.js"></script>
 <script src="./assets/js/sidebar.js"></script>
@@ -33,7 +216,9 @@
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
-                <a href="index.html" class="text-2xl font-bold text-primary">S3E Engenharia</a>
+                <a href="index.html">
+                    <img src="./src/images/logo.png" alt="S3E Engenharia" class="h-12 md:h-16">
+                </a>
 
                 <!-- Menu Desktop (hidden em mobile) -->
                 <ul class="hidden md:flex space-x-8">
@@ -46,11 +231,12 @@
                                 class="fas fa-envelope"></i></a></li>
                     <li><a href="servicos.html" class="hover:text-primary transition">Serviços <i
                                 class="fas fa-tools"></i></a></li>
-                    <li><a href="https://www.instagram.com/s3eengenhariaeletrica/"
+                    <li><a href="https://www.instagram.com/s3eengenhariaeletrica/" target="_blank"
                             class="hover:text-primary transition"><i class="fab fa-instagram" aria-hidden="true"></i>
                             Instagram</a></li>
-                    <li><a href="https://www.facebook.com/s3eengenharia" class="hover:text-primary transition"><i
-                                class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+                    <li><a href="https://www.facebook.com/s3eengenharia" target="_blank"
+                            class="hover:text-primary transition"><i class="fab fa-facebook" aria-hidden="true"></i>
+                            Facebook</a></li>
                 </ul>
 
                 <!-- Botão Mobile -->
@@ -116,15 +302,57 @@
                 <div id="sidebar-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
     </header>
 
-    <main class="container mx-auto px-4 py-16">
-        <!-- Seção Introdução -->
-        <section class="text-center mb-20">
-            <h1 class="text-4xl font-bold text-primary mb-4">Nossos Serviços</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Soluções completas em engenharia elétrica para residências, indústrias e comércios.
-            </p>
-        </section>
+    <!-- Seção Introdução -->
+    <section
+    class="relative overflow-hidden bg-gradient-to-br  from-gray-900 to-blue-900 py-32 md:py-40 text-center">
+    <!-- Efeito de partículas ou padrão sutil -->
+            <div class="absolute inset-0 opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
 
+            <!-- Imagem decorativa flutuante -->
+            <div class="absolute right-10 top-1/4 opacity-20 animate-float">
+                <svg class="w-32 h-32 text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <!-- Tag de categoria -->
+                <span
+                    class="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-fade-in">
+                    Engenharia Elétrica
+                </span>
+
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-down">
+                    <span class="text-accent">Soluções Elétricas</span> Sob Medida
+                </h1>
+
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 animate-fade-in-down delay-100">
+                    Projetos completos e execução precisa para residências, indústrias e comércios com excelência
+                    técnica
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-down delay-200">
+                    <a href="#residencial" class="btn-primary px-8 py-3">
+                        <i class="fas fa-home mr-2"></i> Residencial
+                    </a>
+                    <a href="#industrial" class="btn-secondary px-8 py-3">
+                        <i class="fas fa-industry mr-2"></i> Industrial
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Seta indicativa -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+        
+        <main class="container px-6 pt-16 pb-12">
         <!-- Lista de Serviços -->
         <div class="space-y-28">
             <!-- Serviço 1 -->
@@ -155,7 +383,7 @@
                 </div>
 
                 <div class="lg:w-1/2 service-photo">
-                    <img src="https://placeholder.com/600x400?text=Projeto+Elétrico" alt="Projeto elétrico"
+                    <img src="/src/images/hero3.jpg" alt="Projeto elétrico"
                         class="rounded-lg w-full h-auto border-4 border-white">
                 </div>
             </div>
@@ -187,7 +415,7 @@
                 </div>
 
                 <div class="lg:w-1/2 service-photo">
-                    <img src="https://placeholder.com/600x400?text=Laudo+Técnico" alt="Laudo técnico"
+                    <img src="/src/images/Laudo-das-Instalacoes-Eletricas.webp" alt="Laudo técnico"
                         class="rounded-lg w-full h-auto border-4 border-white">
                 </div>
             </div>
@@ -220,8 +448,8 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2 service-photo">
-                    <img src="https://placeholder.com/600x400?text=Manutenção+Elétrica"
-                        alt="Técnico realizando manutenção" class="rounded-lg w-full h-auto border-4 border-white">
+                    <img src="/src/images/manutencao-preventiva.jpg" alt="Técnico realizando manutenção"
+                        class="rounded-lg w-full h-auto border-4 border-white">
                 </div>
             </div>
 
@@ -254,8 +482,8 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2 service-photo">
-                    <img src="https://placeholder.com/600x400?text=Eficiência+Energética"
-                        alt="Gráficos de eficiência energética" class="rounded-lg w-full h-auto border-4 border-white">
+                    <img src="/src/images/eficiencia-energetica.jpg" alt="Gráficos de eficiência energética"
+                        class="rounded-lg w-full h-auto border-4 border-white">
                 </div>
             </div>
 
@@ -291,7 +519,7 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2 service-photo">
-                    <img src="https://placeholder.com/600x400?text=Energia+Solar" alt="Instalação de painéis solares"
+                    <img src="/src/images/energia-fotovoltaica.jpg" alt="Instalação de painéis solares"
                         class="rounded-lg w-full h-auto border-4 border-white">
                 </div>
             </div>
@@ -331,7 +559,7 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2 service-photo">
-                    <img src="https://placeholder.com/600x400?text=Quadro+Comando" alt="Quadro de comando industrial"
+                    <img src="/src/images/quadro-de-comando.jpg" alt="Quadro de comando industrial"
                         class="rounded-lg w-full h-auto border-4 border-white">
                 </div>
             </div>
@@ -371,7 +599,7 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2 service-photo">
-                    <img src="https://placeholder.com/600x400?text=Quadro+Alumínio" alt="Quadro elétrico de alumínio"
+                    <img src="/src/images/quadro-alum.jpg" alt="Quadro elétrico de alumínio"
                         class="rounded-lg w-full h-auto border-4 border-white">
                 </div>
             </div>
@@ -411,8 +639,8 @@
                     </div>
                 </div>
                 <div class="lg:w-1/2 service-photo">
-                    <img src="https://placeholder.com/600x400?text=Quadro+Policarbonato"
-                        alt="Quadro elétrico de policarbonato" class="rounded-lg w-full h-auto border-4 border-white">
+                    <img src="/src/images/quadro-eletrico-de-policarbonato.jpg" alt="Quadro elétrico de policarbonato"
+                        class="rounded-lg w-full h-auto border-4 border-white">
                 </div>
             </div>
         </div>
@@ -421,102 +649,93 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-16">
-            <!-- Coluna 1: Logo e Slogan -->
-            <div class="space-y-6">
-                <img src="./src/images/logo.png" alt="S3E Engenharia" class="h-14">
-                <p class="text-lg">Soluções completas em engenharia elétrica com excelência técnica e segurança.</p>
-                
-                <!-- Redes Sociais -->
-                <div class="flex space-x-4 pt-2">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in text-xl"></i>
-                    </a>
-                    <a href="https://www.instagram.com/s3eengenhariaeletrica/" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
-                        <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                    <a href="https://wa.me/554730838361/" class="text-gray-400 hover:text-white transition-colors" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                    </a>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-16">
+                <!-- Coluna 1: Logo e Slogan -->
+                <div class="space-y-6">
+                    <img src="./src/images/logo.png" alt="S3E Engenharia" class="h-14">
+                    <p class="text-lg">Soluções completas em engenharia elétrica com excelência técnica e segurança.</p>
+
+                    <!-- Redes Sociais -->
+                    <div class="flex space-x-4 pt-2">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/s3eengenhariaeletrica/"
+                            class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/554730838361/" class="text-gray-400 hover:text-white transition-colors"
+                            aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Coluna 2: Links Rápidos -->
-            <div>
-                <h3 class="text-white text-lg font-semibold mb-6">Navegação</h3>
-                <ul class="space-y-3">
-                    <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
-                    <li><a href="#servicos" class="hover:text-white transition-colors">Serviços</a></li>
-                    <li><a href="#sobre" class="hover:text-white transition-colors">Sobre Nós</a></li>
-                    <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
-                </ul>
-            </div>
-
-            <!-- Coluna 3: Contatos -->
-            <div>
-                <h3 class="text-white text-lg font-semibold mb-6">Contato</h3>
-                <address class="not-italic space-y-4">
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-map-marker-alt mt-1 text-accent"></i>
-                        <p>R. Blumenau, 1622 - Barra do Rio, Itajaí - SC, 88305-104</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-phone-alt text-accent"></i>
-                        <a href="tel:+554730838361" class="hover:text-white">(47) 3083-8361</a>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-envelope text-accent"></i>
-                        <a href="mailto:contato@s3eengenharia.com.br" class="hover:text-white">contato@s3eengenharia.com.br</a>
-                    </div>
-                </address>
-            </div>
-
-            <!-- Coluna 4: Horário -->
-            <div>
-                <h3 class="text-white text-lg font-semibold mb-6">Horário Comercial</h3>
-                <ul class="space-y-2">
-                    <li class="flex justify-between">
-                        <span>Segunda - Sexta:</span>
-                        <span>08h - 18h</span>
-                    </li>
-                    <!-- <li class="flex justify-between">
-                        <span>Sábado:</span>
-                        <span>09h - 12h</span>
-                    </li>
-                    <li class="flex justify-between">
-                        <span>Plantão 24h:</span>
-                        <span class="text-accent">Emergências</span>
-                    </li> -->
-                </ul>
-
-                <!-- Botão de WhatsApp Fixo (Mobile) -->
-                <a href="#" class="md:hidden mt-6 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
-                </a>
-            </div>
-        </div>
-
-        <!-- Rodapé Inferior -->
-        <div class="border-t border-gray-800 mt-12 pt-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <!-- Coluna 2: Links Rápidos -->
                 <div>
-                    <p class="text-sm">
-                        <span class="text-white">S3E Engenharia Elétrica LTDA</span> - CNPJ: 12.345.678/0001-99
-                    </p>
+                    <h3 class="text-white text-lg font-semibold mb-6">Navegação</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Serviços</a></li>
+                        <li><a href="/sobre.html" class="hover:text-white transition-colors">Sobre Nós</a></li>
+                        <li><a href="/contato.html" class="hover:text-white transition-colors">Contato</a></li>
+                    </ul>
                 </div>
-                <div class="flex flex-wrap justify-center gap-4 text-sm">
-                    <a href="#" class="hover:text-white">Política de Privacidade</a>
-                    <span>•</span>
-                    <a href="#" class="hover:text-white">Termos de Serviço</a>
-                    <span>•</span>
-                    <a href="#" class="hover:text-white">Trabalhe Conosco</a>
+
+                <!-- Coluna 3: Contatos -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-6">Contato</h3>
+                    <address class="not-italic space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-accent"></i>
+                            <p>R. Blumenau, 1622 - Barra do Rio, Itajaí - SC, 88305-104</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-accent"></i>
+                            <a href="tel:+554730838361" class="hover:text-white">(47) 3083-8361</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-accent"></i>
+                            <a href="mailto:contato@s3eengenharia.com.br"
+                                class="hover:text-white">contato@s3eengenharia.com.br</a>
+                        </div>
+                    </address>
+                </div>
+
+                <!-- Coluna 4: Horário -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-6">Horário Comercial</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span>Segunda - Sexta:</span>
+                            <span>08h - 18h</span>
+                        </li>
+                    </ul>
+
+                    <!-- Botão de WhatsApp Fixo (Mobile) -->
+                    <a href="https://wa.me/554730838361"
+                        class="md:hidden mt-6 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rodapé Inferior -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col justify-center items-center gap-4 text-center">
+                    <div>
+                        <p class="text-sm text-gray-400">
+                            <span class="text-white">S3E Engenharia Elétrica LTDA</span><br> CNPJ: 12.345.678/0001-99
+                            © 2025 Todos os direitos reservados. <br>
+                            <a href="https://www.linkedin.com/in/antonio-jdev/" class="text-white">Desenvolvido por
+                                AJR-Dev </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
 

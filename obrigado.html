@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./styles/Css/reset.css">
@@ -23,37 +24,102 @@
 
 <body class="font-poppins bg-lightGray">
     <!-- Header (igual às outras páginas) -->
-     <header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
-                <a href="index.html" class="text-2xl font-bold text-primary">S3E Engenharia</a>
+                <a href="index.html">
+                    <img src="./src/images/logo.png" alt="S3E Engenharia" class="h-12 md:h-16">
+                </a>
 
-                <!-- Menu Desktop (hidden em mobile) -->
-                <ul id="desktop-menu" class="hidden md:flex space-x-8">
-                    <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
-                    <li><a href="Sobre.html" class="hover:text-primary transition">Sobre Nós</a></li>
-                    <li><a href="contato.html" class="hover:text-primary transition">Contato</a></li>
-                    <li><a href="servicos.html" class="hover:text-primary transition">Serviços</a></li>
+                <!-- Menu Desktop -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="index.html" class="hover:text-primary transition flex items-center gap-2">
+                            <i class="fas fa-home"></i> Home
+                        </a></li>
+                    <li><a href="Sobre.html" class="hover:text-primary transition">Sobre Nós <i
+                                class="fas fa-info-circle"></i></a></li>
+                    <li><a href="contato.html" class="hover:text-primary transition">Contato <i
+                                class="fas fa-envelope"></i></a></li>
+                    <li><a href="servicos.html" class="hover:text-primary transition">Serviços <i
+                                class="fas fa-tools"></i></a></li>
+                    <li><a href="https://www.instagram.com/s3eengenhariaeletrica/"
+                            class="hover:text-primary transition"><i class="fab fa-instagram" aria-hidden="true"></i>
+                            Instagram</a></li>
+                    <li><a href="https://www.facebook.com/s3eengenharia" class="hover:text-primary transition"><i
+                                class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
                 </ul>
 
-                <!-- Botão Mobile (só aparece em telas pequenas) -->
-                <button id="mobile-menu-button" class="md:hidden text-primary text-2xl focus:outline-none">
+                <!-- Botão Mobile -->
+                <button id="sidebar-toggle" class="md:hidden text-primary text-2xl focus:outline-none">
                     ☰
                 </button>
-            </div>
 
-            <!-- Menu Mobile (hidden por padrão) -->
-            <ul id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
-                <li><a href="index.html" class="block hover:text-primary transition">Home</a></li>
-                <li><a href="Sobre.html" class="hover:text-primary transition">Sobre Nós</a></li>
-                <li><a href="servicos.html" class="block hover:text-primary transition">Serviços</a></li>
-                <li><a href="contato.html" class="block hover:text-primary transition">Contato</a></li>
-            </ul>
-        </nav>
+                <!-- Sidebar -->
+                <div id="sidebar-mobile"
+                    class="fixed inset-y-0 left-0 w-64 bg-white shadow-xl transform -translate-x-full transition-all duration-300 ease-in-out z-50">
+                    <div class="p-4 flex justify-end">
+                        <button id="sidebar-close" class="text-primary text-2xl focus:outline-none">✕</button>
+                    </div>
+                    <nav class="mt-8">
+                        <ul class="space-y-4 px-4">
+                            <li>
+                                <a href="index.html"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fas fa-home w-6 text-center"></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Sobre.html"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>Sobre Nós</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="servicos.html"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fas fa-tools w-6 text-center"></i>
+                                    <span>Serviços</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contato.html"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fas fa-envelope w-6 text-center"></i>
+                                    <span>Contato</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.me/554730838361/"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fab fa-whatsapp w-6 text-center"></i>
+                                    <span>Tire Dúvidas</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/s3eengenhariaeletrica/"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fab fa-instagram w-6 text-center"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/s3eengenharia"
+                                    class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                    <i class="fab fa-facebook w-6 text-center"></i>
+                                    <span>Facebook</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Overlay -->
+                <div id="sidebar-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
     </header>
-    
-     <main class="container mx-auto py-20 text-center">
+    <main class="container mx-auto py-20 text-center">
         <div class="bg-white rounded-xl shadow-md p-12 max-w-2xl mx-auto">
             <svg class="w-20 h-20 text-primary mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -65,103 +131,95 @@
     </main>
 
     <!-- Footer (igual às outras páginas) -->
-     <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-16">
-            <!-- Coluna 1: Logo e Slogan -->
-            <div class="space-y-6">
-                <img src="./src/images/logo.png" alt="S3E Engenharia" class="h-14">
-                <p class="text-lg">Soluções completas em engenharia elétrica com excelência técnica e segurança.</p>
-                
-                <!-- Redes Sociais -->
-                <div class="flex space-x-4 pt-2">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in text-xl"></i>
-                    </a>
-                    <a href="https://www.instagram.com/s3eengenhariaeletrica/" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
-                        <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                    <a href="https://wa.me/554730838361/" class="text-gray-400 hover:text-white transition-colors" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                    </a>
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-16">
+                <!-- Coluna 1: Logo e Slogan -->
+                <div class="space-y-6">
+                    <img src="./src/images/logo.png" alt="S3E Engenharia" class="h-14">
+                    <p class="text-lg">Soluções completas em engenharia elétrica com excelência técnica e segurança.</p>
+
+                    <!-- Redes Sociais -->
+                    <div class="flex space-x-4 pt-2">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/s3eengenhariaeletrica/"
+                            class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/554730838361/" class="text-gray-400 hover:text-white transition-colors"
+                            aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Coluna 2: Links Rápidos -->
-            <div>
-                <h3 class="text-white text-lg font-semibold mb-6">Navegação</h3>
-                <ul class="space-y-3">
-                    <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
-                    <li><a href="#servicos" class="hover:text-white transition-colors">Serviços</a></li>
-                    <li><a href="#sobre" class="hover:text-white transition-colors">Sobre Nós</a></li>
-                    <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
-                </ul>
-            </div>
-
-            <!-- Coluna 3: Contatos -->
-            <div>
-                <h3 class="text-white text-lg font-semibold mb-6">Contato</h3>
-                <address class="not-italic space-y-4">
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-map-marker-alt mt-1 text-accent"></i>
-                        <p>R. Blumenau, 1622 - Barra do Rio, Itajaí - SC, 88305-104</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-phone-alt text-accent"></i>
-                        <a href="tel:+554730838361" class="hover:text-white">(47) 3083-8361</a>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-envelope text-accent"></i>
-                        <a href="mailto:contato@s3eengenharia.com.br" class="hover:text-white">contato@s3eengenharia.com.br</a>
-                    </div>
-                </address>
-            </div>
-
-            <!-- Coluna 4: Horário -->
-            <div>
-                <h3 class="text-white text-lg font-semibold mb-6">Horário Comercial</h3>
-                <ul class="space-y-2">
-                    <li class="flex justify-between">
-                        <span>Segunda - Sexta:</span>
-                        <span>08h - 18h</span>
-                    </li>
-                    <!-- <li class="flex justify-between">
-                        <span>Sábado:</span>
-                        <span>09h - 12h</span>
-                    </li>
-                    <li class="flex justify-between">
-                        <span>Plantão 24h:</span>
-                        <span class="text-accent">Emergências</span>
-                    </li> -->
-                </ul>
-
-                <!-- Botão de WhatsApp Fixo (Mobile) -->
-                <a href="#" class="md:hidden mt-6 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
-                </a>
-            </div>
-        </div>
-
-        <!-- Rodapé Inferior -->
-        <div class="border-t border-gray-800 mt-12 pt-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <!-- Coluna 2: Links Rápidos -->
                 <div>
-                    <p class="text-sm">
-                        <span class="text-white">S3E Engenharia Elétrica LTDA</span> - CNPJ: 12.345.678/0001-99
-                    </p>
+                    <h3 class="text-white text-lg font-semibold mb-6">Navegação</h3>
+                    <ul class="space-y-3">
+                        <li><a href="/index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/servicos.html" class="hover:text-white transition-colors">Serviços</a></li>
+                        <li><a href="/sobre.html" class="hover:text-white transition-colors">Sobre Nós</a></li>
+                        <li><a href="/contato.html" class="hover:text-white transition-colors">Contato</a></li>
+                    </ul>
                 </div>
-                <div class="flex flex-wrap justify-center gap-4 text-sm">
-                    <a href="#" class="hover:text-white">Política de Privacidade</a>
-                    <span>•</span>
-                    <a href="#" class="hover:text-white">Termos de Serviço</a>
-                    <span>•</span>
-                    <a href="#" class="hover:text-white">Trabalhe Conosco</a>
+
+                <!-- Coluna 3: Contatos -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-6">Contato</h3>
+                    <address class="not-italic space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-accent"></i>
+                            <p>R. Blumenau, 1622 - Barra do Rio, Itajaí - SC, 88305-104</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-accent"></i>
+                            <a href="tel:+554730838361" class="hover:text-white">(47) 3083-8361</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-accent"></i>
+                            <a href="mailto:contato@s3eengenharia.com.br"
+                                class="hover:text-white">contato@s3eengenharia.com.br</a>
+                        </div>
+                    </address>
+                </div>
+
+                <!-- Coluna 4: Horário -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-6">Horário Comercial</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span>Segunda - Sexta:</span>
+                            <span>08h - 18h</span>
+                        </li>
+                    </ul>
+
+                    <!-- Botão de WhatsApp Fixo (Mobile) -->
+                    <a href="https://wa.me/554730838361"
+                        class="md:hidden mt-6 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rodapé Inferior -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col justify-center items-center gap-4 text-center">
+                    <div>
+                        <p class="text-sm text-gray-400">
+                            <span class="text-white">S3E Engenharia Elétrica LTDA</span><br> CNPJ: 12.345.678/0001-99
+                            © 2025 Todos os direitos reservados. <br>
+                            <a href="https://www.linkedin.com/in/antonio-jdev/" class="text-white">Desenvolvido por
+                                AJR-Dev </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
+
 </html>

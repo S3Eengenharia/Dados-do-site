@@ -12,6 +12,95 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/js/tailwind-config.js"></script>
+    <!-- Meta Tags Básicas -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P8RHF6S5');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- SEO Primário -->
+    <title>S3E Engenharia Elétrica | Projetos Elétricos e Energia Solar em SC</title>
+    <meta name="description"
+        content="Soluções em projetos elétricos, energia solar e eficiência energética em Santa Catarina.">
+    <link rel="canonical" href="https://www.s3eengenharia.com.br/" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/images/my-favicon.ico/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/images/my-favicon.ico/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/images/my-favicon.ico/favicon/favicon.svg">
+    <link rel="manifest" href="./src/images/my-favicon.ico/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./src/images/my-favicon.ico/favicon/favicon.svg" color="#1e3852">
+    <meta name="msapplication-TileColor" content="#1e3852">
+    <meta name="theme-color" content="#1e3852">
+
+    <!-- Verificação Google Search Console -->
+    <meta name="google-site-verification" content="COLOQUE_SEU_CODIGO_AQUI" />
+
+    <!-- Meta Tags Sociais (Open Graph) -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="S3E Engenharia Elétrica | Soluções em Projetos e Manutenções elétricas em SC">
+    <meta property="og:description"
+        content="Projetos elétricos de baixa e média tensão, residenciais e industriais com garantia de segurança e eficiência energética.">
+    <meta property="og:image" content="https://www.s3eengenharia.com.br/assets/images/og-image.png">
+    <meta property="og:url" content="https://www.s3eengenharia.com.br/">
+    <meta property="og:site_name" content="S3E Engenharia">
+    <meta property="og:image" content="https://www.s3eengenharia.com.br/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="fb:app_id" content="SEU_APP_ID_FACEBOOK">
+
+    <!-- Schema.org (Dados Estruturados) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ElectricalBusiness",
+        "name": "S3E Engenharia Elétrica",
+        "image": "https://www.s3eengenharia.com.br/assets/images/logo.png",
+        "@id": "https://www.s3eengenharia.com.br/",
+        "url": "https://www.s3eengenharia.com.br/",
+        "telephone": "+554730838361",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. Blumenau, 1622 - Barra do Rio, Itajaí - SC, 88305-104",
+            "addressLocality": "Itajaí",
+            "addressRegion": "SC",
+            "postalCode": "88305-104",
+            "addressCountry": "BR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-26.891301285910547",
+            "longitude": "-48.67625098975925"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+        },
+        "sameAs": [
+            "https://www.facebook.com/s3eengenharia",
+            "https://www.instagram.com/s3eengenhariaeletrica/"
+        ]
+    }
+    </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
@@ -21,7 +110,52 @@
     <meta name="keywords"
         content="engenharia elétrica, serviços elétricos, instalações elétricas, manutenção elétrica, projetos elétricos, consultoria técnica">
 
+    <style>
+        .hero-about {
+            background: linear-gradient(rgba(30, 56, 82, 0.9),
+                    url('https://placeholder.com/1920x600?text=Equipe+S3E') center/cover);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(30, 56, 82, 0.2);
+        }
+
+        .diamond-icon {
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        .value-card:hover .fa-medal,
+        .value-card:hover .fa-shield-alt,
+        .value-card:hover .fa-cogs,
+        .value-card:hover .fa-handshake {
+            transform: rotate(10deg) scale(1.1);
+            transition: all 0.3s ease;
+        }
+        
+    .animate-fade-in-down {
+        animation: fadeInDown 0.8s ease-out forwards;
+    }
+    .delay-100 {
+        animation-delay: 0.1s;
+    }
+    .delay-200 {
+        animation-delay: 0.2s;
+    }
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
 </head>
+
 
 <!-- Script do Menu Mobile -->
 <script src="./assets/js/menu-mobile.js"></script>
@@ -33,7 +167,9 @@
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
-                <a href="index.html" class="text-2xl font-bold text-primary">S3E Engenharia</a>
+                <a href="index.html">
+                    <img src="./src/images/logo.png" alt="S3E Engenharia" class="h-12 md:h-16">
+                </a>
 
                 <!-- Menu Desktop (hidden em mobile) -->
                 <ul class="hidden md:flex space-x-8">
@@ -125,19 +261,35 @@
 
 
     <!-- Conteúdo Página Sobre -->
-    <main>
+    <main class="min-h-screen bg-gray-100">
         <!-- Hero Section -->
-    <aside class="hero-about bg-blue-800 text-white py-28 text-center">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Energizando o Futuro com Excelência</h1>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto">
-                Mais que uma empresa, uma parceira estratégica em soluções elétricas
-            </p>
-        </div>
-    </aside>
+        <aside class="hero-about relative h-screen text-white py-28 text-center overflow-hidden">
+            <!-- Imagem de fundo com overlay escuro -->
+            <div class="absolute inset-0 z-0">
+                <img src="./src/images/quadro-eletrico-de-policarbonato.jpg"
+                    alt="Instalações elétricas profissionais" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gray-900/70"></div> <!-- Overlay azul escuro -->
+            </div>
+
+            <!-- Conteúdo -->
+            <div class="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center h-full">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-down">
+                    Energizando o Futuro com Excelência
+                </h1>
+                <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8 animate-fade-in-down delay-100">
+                    Mais que uma empresa, uma parceira estratégica em soluções elétricas
+                </p>
+                <div class="animate-fade-in-down delay-200">
+                    <a href="https://wa.me/554730838361" target="_blank"
+                        class="inline-flex items-center bg-green-500 hover:bg-green-400 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-green-500/30">
+                        <i class="fab fa-whatsapp mr-2 text-xl"></i> Fale Conosco
+                    </a>
+                </div>
+            </div>
+        </aside>
 
 
-        <section class="container mx-auto py-16 px-4">
+        <section class="container bg-gray-200 py-32 px-8 rounded-lg shadow-lg">
             <h1 class="text-4xl font-bold text-center mb-12 text-primary">Sobre Nós</h1>
             <p class="text-lg text-gray-700 mb-8">
                 A S3E Engenharia é uma empresa especializada em soluções completas de manutenção em engenharia elétrica,
@@ -152,122 +304,213 @@
                 Estamos comprometidos com a inovação e a melhoria contínua, buscando sempre as melhores práticas do
                 mercado para entregar resultados excepcionais.
             </p>
-        </section>
+       
+
         <!-- Missão, Visão, Valores -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-10">
-                <!-- Missão -->
-                <div class="text-center p-8 bg-gray-50 rounded-xl">
-                    <div class="diamond-icon bg-primary w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                        <i class="fas fa-bullseye text-white text-2xl"></i>
+       
+            <div class="container mx-auto py-8 px-4">
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Missão -->
+                    <div class="text-center p-8 bg-blue-200 rounded-xl value-card">
+                        <div class="diamond-icon bg-primary w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-bullseye text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary mb-4">Missão</h3>
+                        <p class="text-gray-700">
+                            Oferecer serviços de excelência, do planejamento à execução, garantindo precisão e
+                            confiabilidade para atender às necessidades dos nossos clientes.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold text-primary mb-4">Missão</h3>
-                    <p class="text-gray-700">
-                        Oferecer serviços de excelência, do planejamento à execução, garantindo precisão e confiabilidade para atender às necessidades dos nossos clientes.
-                    </p>
-                </div>
 
-                <!-- Visão -->
-                <div class="text-center p-8 bg-gray-50 rounded-xl">
-                    <div class="diamond-icon bg-primary w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                        <i class="fas fa-eye text-white text-2xl"></i>
+                    <!-- Visão -->
+                    <div class="text-center p-8 bg-blue-200 rounded-xl value-card">
+                        <div class="diamond-icon bg-primary w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-eye text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary mb-4">Visão</h3>
+                        <p class="text-gray-700">
+                            Ser referência nacional em engenharia elétrica, reconhecida pela inovação tecnológica e
+                            compromisso com a sustentabilidade.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold text-primary mb-4">Visão</h3>
-                    <p class="text-gray-700">
-                        Ser referência nacional em engenharia elétrica, reconhecida pela inovação tecnológica e compromisso com a sustentabilidade.
-                    </p>
-                </div>
 
-                <!-- Valores -->
-                <div class="text-center p-8 bg-gray-50 rounded-xl">
-                    <div class="diamond-icon bg-primary w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                        <i class="fas fa-heart text-white text-2xl"></i>
+                    <!-- Valores -->
+                    <div class="text-center p-8 bg-blue-200 rounded-xl value-card ">
+                        <div class="diamond-icon bg-primary w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-heart text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary mb-4">Valores</h3>
+                        <ul class="space-y-2 text-gray-700 text-left max-w-xs mx-auto">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span>Competência técnica</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span>Valorização do conhecimento</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span>Responsabilidade socioambiental</span>
+                            </li>
+                        </ul>
                     </div>
-                    <h3 class="text-2xl font-bold text-primary mb-4">Valores</h3>
-                    <ul class="space-y-2 text-gray-700 text-left max-w-xs mx-auto">
-                        <li class="flex items-start gap-2">
-                            <i class="fas fa-check text-accent mt-1"></i>
-                            <span>Competência técnica</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="fas fa-check text-accent mt-1"></i>
-                            <span>Valorização do conhecimento</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <i class="fas fa-check text-accent mt-1"></i>
-                            <span>Responsabilidade socioambiental</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- Diferenciais -->
+        <section class="py-20 bg-blue-200 text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-primary mb-16">Por que escolher a S3E?</h2>
+
+                <div
+                    class=" value-card bg-white right-6 border-l-4 border-primary justify-center text-black p-6 rounded-xl shadow-lg w-40 md:w-1/3 mx-auto mb-8">
+                    <p class="font-bold">+15 anos</p>
+                    <p class="text-sm">de experiência no mercado</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Imagem -->
+                    <div class="relative">
+                        <img src="./src/images/inspeção-eletrica.webp" alt="Equipe técnica da S3E"
+                            class="rounded-xl shadow-xl w-full">
+                    </div>
+
+                    <!-- Lista de Diferenciais -->
+                    <div class="space-y-8">
+                        <!-- Diferencial 1 -->
+                        <div class="value-card bg-white p-6 rounded-lg border-l-4 border-primary transition">
+                            <h3 class="text-xl font-bold text-primary mb-3 flex items-center gap-3">
+                                <i class="fas fa-medal text-accent"></i>
+                                Experiência e Qualidade
+                            </h3>
+                            <p class="text-gray-700">
+                                Equipe formada por profissionais experientes e dedicados, com certificações nacionais e
+                                internacionais, focados na excelência e inovação.
+                            </p>
+                        </div>
+
+                        <!-- Diferencial 2 -->
+                        <div class="value-card bg-white p-6 rounded-lg border-l-4 border-primary transition">
+                            <h3 class="text-xl font-bold text-primary mb-3 flex items-center gap-3">
+                                <i class="fas fa-shield-alt text-accent"></i>
+                                Segurança em Primeiro Lugar
+                            </h3>
+                            <p class="text-gray-700">
+                                Todos os projetos seguem rigorosamente as normas NR-10, NR-12, NBR-5410 e demais
+                                regulamentações, com treinamentos constantes da equipe.
+                            </p>
+                        </div>
+
+                        <!-- Diferencial 3 -->
+                        <div class="value-card bg-white p-6 rounded-lg border-l-4 border-primary transition">
+                            <h3 class="text-xl font-bold text-primary mb-3 flex items-center gap-3">
+                                <i class="fas fa-cogs text-accent"></i>
+                                Soluções Personalizadas
+                            </h3>
+                            <p class="text-gray-700">
+                                Desenvolvemos projetos sob medida após análise detalhada das necessidades, com
+                                relatórios customizados e acompanhamento técnico.
+                            </p>
+                        </div>
+
+                        <!-- Diferencial 4 -->
+                        <div class="value-card bg-white p-6 rounded-lg border-l-4 border-primary transition">
+                            <h3 class="text-xl font-bold text-primary mb-3 flex items-center gap-3">
+                                <i class="fas fa-handshake text-accent"></i>
+                                Compromisso com o Cliente
+                            </h3>
+                            <p class="text-gray-700">
+                                Parcerias de longo prazo baseadas em transparência, prazos cumpridos e suporte
+                                pós-entrega com garantia estendida.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <article class="py-16 bg-primary text-white text-center">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-6">Pronto para transformar seu projeto?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Nossa equipe está pronta para entender suas necessidades e oferecer a melhor solução.
+                </p>
+                <a href="contato.html"
+                    class="inline-block bg-gray-300 hover:bg-opacity-90 text-gray-900 px-8 py-3 rounded-lg font-semibold transition">
+                    <i class="fas fa-envelope mr-2"></i> Fale com um Especialista
+                </a>
+            </div>
+        </article>
 
     </main>
 
     <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-16">
-            <!-- Coluna 1: Logo e Slogan -->
-            <div class="space-y-6">
-                <img src="./src/images/logo.png" alt="S3E Engenharia" class="h-14">
-                <p class="text-lg">Soluções completas em engenharia elétrica com excelência técnica e segurança.</p>
-                
-                <!-- Redes Sociais -->
-                <div class="flex space-x-4 pt-2">
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in text-xl"></i>
-                    </a>
-                    <a href="https://www.instagram.com/s3eengenhariaeletrica/" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
-                        <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                    <a href="https://wa.me/554730838361/" class="text-gray-400 hover:text-white transition-colors" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                    </a>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 lg:gap-16">
+                <!-- Coluna 1: Logo e Slogan -->
+                <div class="space-y-6">
+                    <img src="./src/images/logo.png" alt="S3E Engenharia" class="h-14">
+                    <p class="text-lg">Soluções completas em engenharia elétrica com excelência técnica e segurança.</p>
+
+                    <!-- Redes Sociais -->
+                    <div class="flex space-x-4 pt-2">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/s3eengenhariaeletrica/"
+                            class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/554730838361/" class="text-gray-400 hover:text-white transition-colors"
+                            aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Coluna 2: Links Rápidos -->
-            <div>
-                <h3 class="text-white text-lg font-semibold mb-6">Navegação</h3>
-                <ul class="space-y-3">
-                    <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
-                    <li><a href="#servicos" class="hover:text-white transition-colors">Serviços</a></li>
-                    <li><a href="#sobre" class="hover:text-white transition-colors">Sobre Nós</a></li>
-                    <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
-                </ul>
-            </div>
+                <!-- Coluna 2: Links Rápidos -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-6">Navegação</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#servicos" class="hover:text-white transition-colors">Serviços</a></li>
+                        <li><a href="#sobre" class="hover:text-white transition-colors">Sobre Nós</a></li>
+                        <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                    </ul>
+                </div>
 
-            <!-- Coluna 3: Contatos -->
-            <div>
-                <h3 class="text-white text-lg font-semibold mb-6">Contato</h3>
-                <address class="not-italic space-y-4">
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-map-marker-alt mt-1 text-accent"></i>
-                        <p>R. Blumenau, 1622 - Barra do Rio, Itajaí - SC, 88305-104</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-phone-alt text-accent"></i>
-                        <a href="tel:+554730838361" class="hover:text-white">(47) 3083-8361</a>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-envelope text-accent"></i>
-                        <a href="mailto:contato@s3eengenharia.com.br" class="hover:text-white">contato@s3eengenharia.com.br</a>
-                    </div>
-                </address>
-            </div>
+                <!-- Coluna 3: Contatos -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-6">Contato</h3>
+                    <address class="not-italic space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-accent"></i>
+                            <p>R. Blumenau, 1622 - Barra do Rio, Itajaí - SC, 88305-104</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-accent"></i>
+                            <a href="tel:+554730838361" class="hover:text-white">(47) 3083-8361</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-accent"></i>
+                            <a href="mailto:contato@s3eengenharia.com.br"
+                                class="hover:text-white">contato@s3eengenharia.com.br</a>
+                        </div>
+                    </address>
+                </div>
 
-            <!-- Coluna 4: Horário -->
-            <div>
-                <h3 class="text-white text-lg font-semibold mb-6">Horário Comercial</h3>
-                <ul class="space-y-2">
-                    <li class="flex justify-between">
-                        <span>Segunda - Sexta:</span>
-                        <span>08h - 18h</span>
-                    </li>
-                    <!-- <li class="flex justify-between">
+                <!-- Coluna 4: Horário -->
+                <div>
+                    <h3 class="text-white text-lg font-semibold mb-6">Horário Comercial</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span>Segunda - Sexta:</span>
+                            <span>08h - 18h</span>
+                        </li>
+                        <!-- <li class="flex justify-between">
                         <span>Sábado:</span>
                         <span>09h - 12h</span>
                     </li>
@@ -275,34 +518,31 @@
                         <span>Plantão 24h:</span>
                         <span class="text-accent">Emergências</span>
                     </li> -->
-                </ul>
+                    </ul>
 
-                <!-- Botão de WhatsApp Fixo (Mobile) -->
-                <a href="#" class="md:hidden mt-6 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
-                </a>
-            </div>
-        </div>
-
-        <!-- Rodapé Inferior -->
-        <div class="border-t border-gray-800 mt-12 pt-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-                <div>
-                    <p class="text-sm">
-                        <span class="text-white">S3E Engenharia Elétrica LTDA</span> - CNPJ: 12.345.678/0001-99
-                    </p>
+                    <!-- Botão de WhatsApp Fixo (Mobile) -->
+                    <a href="#"
+                        class="md:hidden mt-6 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                    </a>
                 </div>
-                <div class="flex flex-wrap justify-center gap-4 text-sm">
-                    <a href="#" class="hover:text-white">Política de Privacidade</a>
-                    <span>•</span>
-                    <a href="#" class="hover:text-white">Termos de Serviço</a>
-                    <span>•</span>
-                    <a href="#" class="hover:text-white">Trabalhe Conosco</a>
+            </div>
+
+            <!-- Rodapé Inferior -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <div class="flex flex-col justify-center items-center gap-4 text-center">
+                    <div>
+                        <p class="text-sm text-gray-400">
+                            <span class="text-white">S3E Engenharia Elétrica LTDA</span><br> CNPJ: 12.345.678/0001-99
+                            © 2025 Todos os direitos reservados. <br>
+                            <a href="https://www.linkedin.com/in/antonio-jdev/" class="text-white">Desenvolvido por
+                                AJR-Dev </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 
 </body>
