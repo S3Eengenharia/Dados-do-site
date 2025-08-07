@@ -303,58 +303,145 @@
     </header>
 
     <!-- Seção Introdução -->
-    <section
-    class="relative overflow-hidden bg-gradient-to-br  from-gray-900 to-blue-900 py-32 md:py-40 text-center">
-    <!-- Efeito de partículas ou padrão sutil -->
-            <div class="absolute inset-0 opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+    <section class="relative overflow-hidden bg-gradient-to-br  from-gray-900 to-blue-900 py-32 md:py-40 text-center">
+        <!-- Efeito de partículas ou padrão sutil -->
+        <div class="absolute inset-0 opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
 
-            <!-- Imagem decorativa flutuante -->
-            <div class="absolute right-10 top-1/4 opacity-20 animate-float">
-                <svg class="w-32 h-32 text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
-                        d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+        <!-- Imagem decorativa flutuante -->
+        <div class="absolute right-10 top-1/4 opacity-20 animate-float">
+            <svg class="w-32 h-32 text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Tag de categoria -->
+            <span
+                class="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-fade-in">
+                Engenharia Elétrica
+            </span>
+
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-down">
+                <span class="text-accent">Soluções Elétricas</span> Sob Medida
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 animate-fade-in-down delay-100">
+                Projetos completos e execução precisa para residências, indústrias e comércios com excelência
+                técnica
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-down delay-200">
+                <a href="#residencial" class="btn-primary px-8 py-3">
+                    <i class="fas fa-home mr-2"></i> Residencial
+                </a>
+                <a href="#industrial" class="btn-secondary px-8 py-3">
+                    <i class="fas fa-industry mr-2"></i> Industrial
+                </a>
             </div>
+        </div>
 
-            <div class="container mx-auto px-6 relative z-10">
-                <!-- Tag de categoria -->
-                <span
-                    class="inline-block bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-fade-in">
-                    Engenharia Elétrica
-                </span>
+        <!-- Seta indicativa -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
+                </path>
+            </svg>
+        </div>
+    </section>
 
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-down">
-                    <span class="text-accent">Soluções Elétricas</span> Sob Medida
-                </h1>
-
-                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 animate-fade-in-down delay-100">
-                    Projetos completos e execução precisa para residências, indústrias e comércios com excelência
-                    técnica
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-down delay-200">
-                    <a href="#residencial" class="btn-primary px-8 py-3">
-                        <i class="fas fa-home mr-2"></i> Residencial
-                    </a>
-                    <a href="#industrial" class="btn-secondary px-8 py-3">
-                        <i class="fas fa-industry mr-2"></i> Industrial
-                    </a>
+    <main class="container px-6 pt-16 pb-12">
+        <!-- Lista de Serviços -->
+        <!-- Substação Aérea até 300KVA (Primeiro Card) -->
+        
+        <div class="space-y-28">
+            <div class="service-card flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Subestação Aérea até 300KVA</h2>
+                    <div class="prose text-gray-700">
+                        <p>
+                            Projeto e instalação de subestações compactas em poste, solução ideal para áreas urbanas e
+                            rurais com restrição de espaço:
+                        </p>
+                        <ul class="mt-4 space-y-2">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span><strong>Transformadores</strong> de 15kVA a 300kVA</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span><strong>Proteções completas</strong> (chave-fusível, pára-raios, seccionadora)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span><strong>Padronização</strong> conforme normas da concessionária</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span><strong>Entrada aérea</strong> com cabos protegidos</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span><strong>Medição indireta</strong> ou direta conforme necessidade</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 p-3 bg-gray-100 rounded-lg">
+                            <p class="text-sm text-gray-600">
+                                <strong>Vantagens:</strong> Economia de espaço, instalação rápida, menor custo que
+                                subestações convencionais, adequação para áreas com limitação territorial.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 service-photo">
+                    <img src="/src/images/SERVIÇO-1.png" alt="Subestação aérea em poste"
+                        class="rounded-lg w-full h-auto border-4 border-white">
                 </div>
             </div>
-            
-            <!-- Seta indicativa -->
-            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                </svg>
+    
+            <!-- Substação Abrigada -->
+            <div class="service-card flex flex-col lg:flex-row-reverse items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Subestação Abrigada</h2>
+                    <div class="prose text-gray-700">
+                        <p>
+                            Solução completa para medição e transformação em ambientes internos ou externos com proteção:
+                        </p>
+                        <ul class="mt-4 space-y-2">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span><strong>Transformadores</strong> de 75kVA a 3000kVA</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span><strong>Opções de entrada</strong> aérea ou subterrânea</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span><strong>Painéis de média tensão</strong> com proteção digital</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span><strong>Quadros de baixa tensão</strong> com disjuntores inteligentes</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-accent mt-1"></i>
+                                <span><strong>Sistema de ventilação</strong> natural ou forçada</span>
+                            </li>
+                        </ul>
+                        <div class="mt-4 p-3 bg-gray-100 rounded-lg">
+                            <p class="text-sm text-gray-600">
+                                <strong>Vantagens:</strong> Maior proteção contra intempéries, vida útil prolongada dos
+                                equipamentos, flexibilidade de instalação, adequação para grandes cargas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 service-photo">
+                    <img src="/src/images/SUBESTACAO_ABRIGADA_MODERNA.png" alt="Subestação abrigada moderna"
+                        class="rounded-lg w-full h-auto border-4 border-white">
+                </div>
             </div>
-        </section>
-        
-        <main class="container px-6 pt-16 pb-12">
-        <!-- Lista de Serviços -->
-        <div class="space-y-28">
             <!-- Serviço 1 -->
             <div class="service-card flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2">
