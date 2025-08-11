@@ -482,38 +482,63 @@
     <!-- Leaflet JS (Mapa) -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // Mapa -26.891301285910547, -48.67625098975925
-        const map = L.map('map').setView([-26.891301285910547, -48.67625098975925], 15);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
+    // Mapa -26.891301285910547, -48.67625098975925
+    const map = L.map('map').setView([-26.891301285910547, -48.67625098975925], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
 
-        L.marker([-26.891301285910547, -48.67625098975925]).addTo(map)
-            .bindPopup('S3E Engenharia Elétrica')
-            .openPopup();
+    L.marker([-26.891301285910547, -48.67625098975925]).addTo(map)
+        .bindPopup('S3E Engenharia Elétrica')
+        .openPopup();
 
-        // Validação do Formulário
-        document.getElementById('contact-form').addEventListener('submit', function (e) {
-            const phone = document.getElementById('phone').value;
-            if (!/^\(\d{2}\) \d{4,5}-\d{4}$/.test(phone)) {
-                alert('Por favor, insira um telefone válido no formato (XX) XXXXX-XXXX');
-                e.preventDefault();
-            }
-        });
+    // Máscara de Telefone melhorada
+    document.getElementById('phone').addEventListener('input', function (e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 0) {
+            value = value.replace(/^(\d{0,2})/, '($1)');
+        }
+        if (value.length > 3) {
+            value = value.replace(/^\((\d{2})\)\s?(\d{0,5})/, '($1) $2');
+        }
+        if (value.length > 10) {
+            value = value.replace(/(\d{4})(\d{1,4})/, '$1-$2');
+        }
+        e.target.value = value;
+    });
 
-        // Máscara de Telefone
-        document.getElementById('phone').addEventListener('input', function (e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 2) {
-                value = `(${value.substring(0, 2)}) ${value.substring(2)}`;
-            }
-            if (value.length > 10) {
-                value = `${value.substring(0, 10)}-${value.substring(10, 14)}`;
-            }
-            e.target.value = value;
-        });
-    </script>
-
+    // Validação do Formulário melhorada
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        // Validação básica
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const message = document.getElementById('message').value.trim();
+        
+        if (!name || !email || !phone || !message) {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+            return;
+        }
+        
+        // Validação de e-mail simples
+        if (!email.includes('@') || !email.includes('.')) {
+            alert('Por favor, insira um e-mail válido.');
+            return;
+        }
+        
+        // Validação de telefone mais flexível
+        const phoneDigits = phone.replace(/\D/g, '');
+        if (phoneDigits.length < 10 || phoneDigits.length > 11) {
+            alert('Por favor, insira um telefone válido com DDD (10 ou 11 dígitos).');
+            return;
+        }
+        
+        // Se tudo estiver ok, envia o formulário
+        this.submit();
+    });
+</script>
 </body>
 
 </html>
