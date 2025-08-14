@@ -34,7 +34,7 @@
     <meta name="theme-color" content="#1e3852">
 
     <!-- Verificação Google Search Console -->
-    <meta name="google-site-verification" content="EbbFSr7RcEg41NzuK_g1anh3DdP2M4y-DKEq6IUbuZ4"/>
+    <meta name="google-site-verification" content="EbbFSr7RcEg41NzuK_g1anh3DdP2M4y-DKEq6IUbuZ4" />
 
     <!-- Meta Tags Sociais (Open Graph) -->
     <meta property="og:locale" content="pt_BR">
@@ -43,6 +43,7 @@
     <meta property="og:description"
         content="Soluções em projetos elétricos, Subestações de baixa e média tensão, energia solar e eficiência energética em Santa Catarina.">
     <meta property="og:image" content="https://www.s3eengenharia.com.br/src/images/og-image.png">
+    <meta property="og:image:alt" content="S3E Engenharia Elétrica -
     <meta property="og:url" content="https://www.s3eengenharia.com.br/">
     <meta property="og:site_name" content="S3E Engenharia">
     <meta property="og:image" content="https://www.s3eengenharia.com.br/src/images/og-image.png">
@@ -113,13 +114,50 @@
 <script src="./assets/js/sidebar.js"></script>
 
 <style>
+    /* Estilos personalizados para o carrossel da seção de serviços */
+    .servico-carrossel {
+        animation: scroll 40s linear infinite;
+        width: max-content;
+    }
+    
+    .servico-item {
+        transition: filter 0.3s ease, transform 0.3s ease;
+        filter: grayscale(0);
+    }
+    
+    .servico-carrossel:hover {
+        animation-play-state: paused;
+    }
+    
+    .servico-carrossel:hover .servico-item {
+        filter: grayscale(100%) brightness(0.7);
+    }
+    
+    .servico-carrossel:hover .servico-item:hover {
+        filter: grayscale(0);
+        transform: scale(1.05);
+        z-index: 10;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
     /* Estilos base para os botões */
-    .btn-primary, .btn-whatsapp {
+    .btn-primary,
+    .btn-whatsapp {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         padding: 0.8rem 1.8rem;
-        border-radius: 0.375rem; /* 6px */
+        border-radius: 0.375rem;
+        /* 6px */
         font-weight: 600;
         font-size: 1rem;
         line-height: 1.5;
@@ -134,12 +172,14 @@
 
     /* Botão Primário */
     .btn-primary {
-        background-color: #3B82F6; /* Azul Tailwind */
+        background-color: #3B82F6;
+        /* Azul Tailwind */
         color: white;
     }
 
     .btn-primary:hover {
-        background-color: #2563EB; /* Azul mais escuro */
+        background-color: #2563EB;
+        /* Azul mais escuro */
         transform: translateY(-2px);
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
@@ -156,12 +196,14 @@
 
     /* Botão WhatsApp */
     .btn-whatsapp {
-        background-color: #25D366; /* Verde WhatsApp */
+        background-color: #25D366;
+        /* Verde WhatsApp */
         color: white;
     }
 
     .btn-whatsapp:hover {
-        background-color: #128C7E; /* Verde mais escuro */
+        background-color: #128C7E;
+        /* Verde mais escuro */
         transform: translateY(-2px);
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
@@ -182,14 +224,24 @@
     }
 
     @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
-        100% { transform: scale(1); }
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
     }
 
     /* Responsividade */
     @media (max-width: 640px) {
-        .btn-primary, .btn-whatsapp {
+
+        .btn-primary,
+        .btn-whatsapp {
             width: 100%;
             padding: 0.75rem 1.5rem;
         }
@@ -365,8 +417,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
-                    <img src="/src/images/s3e-edit.jpg" alt="Equipe S3E"
-                        class="rounded-lg shadow-xl">
+                    <img src="/src/images/s3e-edit.jpg" alt="Equipe S3E" class="rounded-lg shadow-xl">
                 </div>
                 <div class="md:w-1/2">
                     <h2 class="text-3xl font-bold text-white mb-6">Sobre a S3E Engenharia Elétrica</h2>
@@ -401,63 +452,161 @@
 
 
     <!-- Serviços -->
-    <section id="servicos" class="container mx-auto py-16 px-6">
-        <h2 class="text-3xl font-bold text-center mb-12 text-primary">Nossos Serviços</h2>
-        <a href="/servicos.html" class="text-accent font-semibold hover:underline">Conheça nossos serviços →</a>
+    <section id="servicos" class="py-16 px-6 bg-gray-50 overflow-hidden">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 text-primary">Nossos Serviços Especializados</h2>
+            <p class="text-center max-w-3xl mx-auto mb-12 text-darkGray">
+                Oferecemos soluções completas em engenharia elétrica, desde projetos personalizados até manutenções
+                especializadas.
+                Nossos serviços atendem aos mais altos padrões de qualidade e segurança.
+            </p>
 
-        <p class="text-center max-w-2xl mx-auto mb-12 text-darkGray">Da concepção à manutenção, a S3E
-            oferece um portfólio completo para demandas complexas.</p>
+            <div class="relative h-96 group">
+                <!-- Container do carrossel -->
+                <div class="flex absolute left-0 top-0 h-full servico-carrossel">
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-3 text-primary">Instalações Elétricas</h3>
-                    <p class="text-gray-600">Soluções seguras e eficientes para sua infraestrutura.</p>
+                    <!-- Card 1 -->
+                    <a href="servicos.html"
+                        class="servico-item flex-shrink-0 w-64 mx-2 h-full rounded-xl overflow-hidden shadow-lg relative transition-all duration-300 block">
+                        <img src="./src/images/subestacao-aerea.jpg" alt="Subestação Aérea"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-bold text-white mb-1">Subestação Aérea até 300KVA</h3>
+                            <p class="text-gray-300 text-xs">Instalação e manutenção</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 2 -->
+                    <a href="servicos.html"
+                        class="servico-item flex-shrink-0 w-64 mx-2 h-full rounded-xl overflow-hidden shadow-lg relative transition-all duration-300 block">
+                        <img src="./src/images/subestacao-transformador.jpg" alt="Subestação Abrigada"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-bold text-white mb-1">Subestação Abrigada</h3>
+                            <p class="text-gray-300 text-xs">Soluções completas</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 3 -->
+                    <a href="servicos.html"
+                        class="servico-item flex-shrink-0 w-64 mx-2 h-full rounded-xl overflow-hidden shadow-lg relative transition-all duration-300 block">
+                        <img src="./src/images/projetos-eletricos.jpg" alt="Projetos Elétricos"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-bold text-white mb-1">Projetos Elétricos</h3>
+                            <p class="text-gray-300 text-xs">Normas técnicas</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 4 -->
+                    <a href="servicos.html"
+                        class="servico-item flex-shrink-0 w-64 mx-2 h-full rounded-xl overflow-hidden shadow-lg relative transition-all duration-300 block">
+                        <img src="./src/images/laudos-tecnicos.jpg" alt="Laudos Técnicos"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-bold text-white mb-1">Laudos Técnicos</h3>
+                            <p class="text-gray-300 text-xs">Regularização e segurança</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 5 -->
+                    <a href="servicos.html"
+                        class="servico-item flex-shrink-0 w-64 mx-2 h-full rounded-xl overflow-hidden shadow-lg relative transition-all duration-300 block">
+                        <img src="./src/images/manutencao-corretiva.jpg" alt="Manutenção" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-bold text-white mb-1">Manutenção Preventiva/Corretiva</h3>
+                            <p class="text-gray-300 text-xs">Sistemas elétricos</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 6 -->
+                    <a href="servicos.html"
+                        class="servico-item flex-shrink-0 w-64 mx-2 h-full rounded-xl overflow-hidden shadow-lg relative transition-all duration-300 block">
+                        <img src="./src/images/eficiencia-energetica-.jpg" alt="Eficiência Energética"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-bold text-white mb-1">Eficiência Energética</h3>
+                            <p class="text-gray-300 text-xs">Otimização de consumo</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 7 -->
+                    <a href="servicos.html"
+                        class="servico-item flex-shrink-0 w-64 mx-2 h-full rounded-xl overflow-hidden shadow-lg relative transition-all duration-300 block">
+                        <img src="./src/images/energia-solar.jpg" alt="Energia Fotovoltaica"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-bold text-white mb-1">Energia Fotovoltaica</h3>
+                            <p class="text-gray-300 text-xs">Sustentabilidade energética</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 8 -->
+                    <a href="servicos.html"
+                        class="servico-item flex-shrink-0 w-64 mx-2 h-full rounded-xl overflow-hidden shadow-lg relative transition-all duration-300 block">
+                        <img src="./src/images/quadro-comando.jpg" alt="Quadros de Comando"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-bold text-white mb-1">Quadros de Comando</h3>
+                            <p class="text-gray-300 text-xs">Projetos personalizados</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 9 -->
+                    <a href="servicos.html"
+                        class="servico-item flex-shrink-0 w-64 mx-2 h-full rounded-xl overflow-hidden shadow-lg relative transition-all duration-300 block">
+                        <img src="./src/images/quadro-aluminio.jpg" alt="Quadros de Alumínio"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-bold text-white mb-1">Quadros Elétricos de Alumínio</h3>
+                            <p class="text-gray-300 text-xs">Durabilidade e qualidade</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 10 -->
+                    <a href="servicos.html"
+                        class="servico-item flex-shrink-0 w-64 mx-2 h-full rounded-xl overflow-hidden shadow-lg relative transition-all duration-300 block">
+                        <img src="./src/images/quadro de poli.jpeg" alt="Quadros Elétricos de Policarbonato"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-bold text-white mb-1">Quadros Elétricos de Policarbonato</h3>
+                            <p class="text-gray-300 text-xs">Segurança e modernidade</p>
+                        </div>
+                    </a>
+
+                    <!-- Cards duplicados para efeito de loop -->
+                    <a href="servicos.html"
+                        class="servico-item flex-shrink-0 w-64 mx-2 h-full rounded-xl overflow-hidden shadow-lg relative transition-all duration-300 block">
+                        <img src="./src/images/subestacao-aerea.jpg" alt="Subestação Aérea"
+                            class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-bold text-white mb-1">Subestação Aérea até 300KVA</h3>
+                            <p class="text-gray-300 text-xs">Instalação e manutenção</p>
+                        </div>
+                    </a>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-3 text-primary">Energia Solar</h3>
-                    <p class="text-gray-600">Soluções sustentáveis para geração de energia limpa.</p>
-                </div>
+            <!-- Botão CTA -->
+            <div class="text-center mt-12">
+                <a href="servicos.html"
+                    class="inline-flex items-center px-8 py-4 btn-primary text-white rounded-lg font-bold hover:bg-accent-dark transition transform hover:-translate-y-1">
+                    <i class="fas fa-bolt mr-3"></i> Conheça todos os nossos serviços
+                </a>
             </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-3 text-primary">Projetos Elétricos</h3>
-                    <p class="text-gray-600">Elaboração conforme normas técnicas e necessidade do cliente.
-                    </p>
-                </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-3 text-primary">Consultoria Técnica</h3>
-                    <p class="text-gray-600">Análise e otimização de sistemas elétricos para eficiência máxima.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-3 text-primary">Laudos Técnicos</h3>
-                    <p class="text-gray-600">Avaliações detalhadas para garantir conformidade e segurança.</p>
-                </div>
-            </div>
-            <!-- Card 6 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-3 text-primary">Quadros Elétricos</h3>
-                    <p class="text-gray-600">Projetos e instalações de quadros elétricos personalizados.</p>
-                </div>
-            </div>
+        </div>
     </section>
-
     <!-- Diferenciais -->
     <aside class="py-16 bg-primary text-white">
         <div class="container mx-auto px-4 text-center">
@@ -487,171 +636,190 @@
                     <p>Equipe dedicada a entender e atender às necessidades específicas de cada cliente.</p>
                 </div>
             </div>
-             <!-- Efeito de background -->
-    <div class="absolute inset-0 bg-gray-900/20"></div>
-    
-    <div class="container mx-auto px-4 relative z-10">
-        <!-- Seção de diferenciais existente -->
-        <div class="text-center mb-24">
-            <h2 class="text-3xl font-bold mb-12">Área de Atuação</h2>
-            <div class="grid md:grid-cols-4 gap-8">
-                <!-- Seus diferenciais atuais aqui... -->
-            </div>
-        </div>
+            <!-- Efeito de background -->
+            <div class="absolute inset-0 bg-gray-900/20"></div>
 
-        <!-- Novos Cards Sobrepostos -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 -mt-32 mb-16 px-4">
-            <!-- Card Residencial/Predial -->
-            <div class="bg-white text-gray-800 rounded-xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
-                <div class="h-64 bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center relative">
-                    <div class="absolute inset-0 bg-primary/70 flex items-center justify-center">
-                        <h3 class="text-3xl font-bold text-white">Comercial</h3>
+            <div class="container mx-auto px-4 relative z-10">
+                <!-- Seção de diferenciais existente -->
+                <div class="text-center mb-24">
+                    <h2 class="text-3xl font-bold mb-12">Área de Atuação</h2>
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <!-- Seus diferenciais atuais aqui... -->
                     </div>
                 </div>
-                <div class="p-8">
-                    <p class="mb-6">Na S3E, projetamos soluções elétricas comerciais que garantem segurança e eficiência, proporcionando um ambiente seguro e confortável para sua empresa.</p>
-                    <a href="/servicos.html" class="inline-block px-6 py-3 bg-accent text-gray-900 rounded-lg font-medium hover:bg-accent-dark transition">
-                        Ver serviços <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
 
-            <!-- Card Industrial -->
-            <div class="bg-white text-gray-900 rounded-xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
-                <div class="h-64 bg-[url('src/images/subestacao-transformador.jpg')] bg-cover bg-center relative">
-                    <div class="absolute inset-0 bg-primary/70 flex items-center justify-center">
-                        <h3 class="text-3xl font-bold text-white">Industrial</h3>
+                <!-- Novos Cards Sobrepostos -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 -mt-32 mb-16 px-4">
+                    <!-- Card Residencial/Predial -->
+                    <div
+                        class="bg-white text-gray-800 rounded-xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                        <div
+                            class="h-64 bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center relative">
+                            <div class="absolute inset-0 bg-primary/70 flex items-center justify-center">
+                                <h3 class="text-3xl font-bold text-white">Comercial</h3>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <p class="mb-6">Na S3E, projetamos soluções elétricas comerciais que garantem segurança e
+                                eficiência, proporcionando um ambiente seguro e confortável para sua empresa.</p>
+                            <a href="/servicos.html"
+                                class="inline-block px-6 py-3 bg-accent text-gray-900 rounded-lg font-medium hover:bg-accent-dark transition">
+                                Ver serviços <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card Industrial -->
+                    <div
+                        class="bg-white text-gray-900 rounded-xl overflow-hidden shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                        <div
+                            class="h-64 bg-[url('src/images/subestacao-transformador.jpg')] bg-cover bg-center relative">
+                            <div class="absolute inset-0 bg-primary/70 flex items-center justify-center">
+                                <h3 class="text-3xl font-bold text-white">Industrial</h3>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <p class="mb-6">Oferecemos soluções elétricas industriais que asseguram conformidade e
+                                eficiência, criando um ambiente de trabalho seguro e otimizado para o sucesso da sua
+                                empresa.</p>
+                            <a href="/servicos.html"
+                                class="inline-block px-6 py-3 bg-accent text-gray-900 rounded-lg font-medium hover:bg-accent-dark transition">
+                                Ver serviços <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="p-8">
-                    <p class="mb-6">Oferecemos soluções elétricas industriais que asseguram conformidade e eficiência, criando um ambiente de trabalho seguro e otimizado para o sucesso da sua empresa.</p>
-                    <a href="/servicos.html" class="inline-block px-6 py-3 bg-accent text-gray-900 rounded-lg font-medium hover:bg-accent-dark transition">
-                        Ver serviços <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
             </div>
-        </div>
-    </div>
         </div>
     </aside>
 
     <!-- Conteúdo -->
     <section id="sobre" class="bg-gray-900 py-16 px-6 relative overflow-hidden">
-    <!-- Efeito de gradiente para profundidade -->
-    <div class="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 opacity-95"></div>
-    
-    <div class="container mx-auto max-w-6xl relative z-10">
-        <!-- Cabeçalho -->
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Excelência em engenharia elétrica</h2>
-            <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                Na S3E, a energia que move seus projetos é a mesma que nos move: a paixão por inovar, o compromisso com a segurança e a excelência que transforma ideias em realidade.
-            </p>
+        <!-- Efeito de gradiente para profundidade -->
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 opacity-95"></div>
+
+        <div class="container mx-auto max-w-6xl relative z-10">
+            <!-- Cabeçalho -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Excelência em engenharia elétrica</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Na S3E, a energia que move seus projetos é a mesma que nos move: a paixão por inovar, o compromisso
+                    com a segurança e a excelência que transforma ideias em realidade.
+                </p>
+            </div>
+
+            <!-- Cards de Projetos (2 colunas) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <!-- Card 1 - Baixa Tensão -->
+                <div
+                    class="bg-gray-300 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 hover:shadow-accent/20 hover:-translate-y-2">
+                    <div class="h-48 bg-[url('src/images/baixa-tensao.webp')] bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Projetos de Baixa Tensão</h3>
+                        <p class="text-gray-900 mb-4">
+                            Soluções completas para instalações elétricas residenciais, comerciais e industriais até
+                            1000V, com os mais altos padrões de segurança.
+                        </p>
+                        <ul class="space-y-2 text-accent">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Dimensionamento preciso
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Normas ABNT e NR-10
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Eficiência energética
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 - Média Tensão -->
+                <div
+                    class="bg-gray-300 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 hover:shadow-accent/20 hover:-translate-y-2">
+                    <div class="h-48 bg-[url('src/images/media-tensao.webp')] bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Projetos de Média Tensão</h3>
+                        <p class="text-gray-900 mb-4">
+                            Sistemas especializados para subestações e redes de distribuição entre 1kV e 36kV, com
+                            tecnologia de ponta.
+                        </p>
+                        <ul class="space-y-2 text-accent">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Análise de curto-circuito
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Estudos de coordenação
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Proteção e seletividade
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards de Quadros Elétricos (2 colunas) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 3 - Quadros de Comando -->
+                <div
+                    class="bg-gray-300 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 hover:shadow-accent/20 hover:-translate-y-2">
+                    <div class="h-48 bg-[url('src/images/quadro-de-comando-s3e.jpg')] bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Quadros de Comando</h3>
+                        <p class="text-gray-900 mb-4">
+                            Projeto, fabricação e instalação de quadros elétricos personalizados para controle de
+                            máquinas e processos industriais.
+                        </p>
+                        <ul class="space-y-2 text-accent">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> CLP e IHM integrados
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Diagramas atualizados
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Testes rigorosos
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4 - Quadros de Distribuição -->
+                <div
+                    class="bg-gray-300 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 hover:shadow-accent/20 hover:-translate-y-2">
+                    <div class="h-48 bg-[url('src/images/quadro-edit.jpg')] bg-cover bg-center"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Quadros Elétricos de Policarbonato</h3>
+                        <p class="text-gray-900 mb-4">
+                            Soluções inteligentes para distribuição de energia com dispositivos de proteção e medição de
+                            última geração.
+                        </p>
+                        <ul class="space-y-2 text-accent">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Organização modular
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Disjuntores inteligentes
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i> Certificação INMETRO
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Cards de Projetos (2 colunas) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <!-- Card 1 - Baixa Tensão -->
-            <div class="bg-gray-300 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 hover:shadow-accent/20 hover:-translate-y-2">
-                <div class="h-48 bg-[url('src/images/baixa-tensao.webp')] bg-cover bg-center"></div>
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Projetos de Baixa Tensão</h3>
-                    <p class="text-gray-900 mb-4">
-                        Soluções completas para instalações elétricas residenciais, comerciais e industriais até 1000V, com os mais altos padrões de segurança.
-                    </p>
-                    <ul class="space-y-2 text-accent">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i> Dimensionamento preciso
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i> Normas ABNT e NR-10
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i> Eficiência energética
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Card 2 - Média Tensão -->
-            <div class="bg-gray-300 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 hover:shadow-accent/20 hover:-translate-y-2">
-                <div class="h-48 bg-[url('src/images/media-tensao.webp')] bg-cover bg-center"></div>
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Projetos de Média Tensão</h3>
-                    <p class="text-gray-900 mb-4">
-                        Sistemas especializados para subestações e redes de distribuição entre 1kV e 36kV, com tecnologia de ponta.
-                    </p>
-                    <ul class="space-y-2 text-accent">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i> Análise de curto-circuito
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i> Estudos de coordenação
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i> Proteção e seletividade
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Cards de Quadros Elétricos (2 colunas) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Card 3 - Quadros de Comando -->
-            <div class="bg-gray-300 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 hover:shadow-accent/20 hover:-translate-y-2">
-                <div class="h-48 bg-[url('src/images/quadro-de-comando-s3e.jpg')] bg-cover bg-center"></div>
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Quadros de Comando</h3>
-                    <p class="text-gray-900 mb-4">
-                        Projeto, fabricação e instalação de quadros elétricos personalizados para controle de máquinas e processos industriais.
-                    </p>
-                    <ul class="space-y-2 text-accent">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i> CLP e IHM integrados
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i> Diagramas atualizados
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i> Testes rigorosos
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Card 4 - Quadros de Distribuição -->
-            <div class="bg-gray-300 rounded-xl overflow-hidden shadow-2xl transition-all duration-300 hover:shadow-accent/20 hover:-translate-y-2">
-                <div class="h-48 bg-[url('src/images/quadro-edit.jpg')] bg-cover bg-center"></div>
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Quadros Elétricos de Policarbonato</h3>
-                    <p class="text-gray-900 mb-4">
-                        Soluções inteligentes para distribuição de energia com dispositivos de proteção e medição de última geração.
-                    </p>
-                    <ul class="space-y-2 text-accent">
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i> Organização modular
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i> Disjuntores inteligentes
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle mr-2"></i> Certificação INMETRO
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- Contato -->
     <section id="contato" class="bg-lightGray py-16 px-6">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-3xl font-bold text-center mb-8 text-primary">Contato</h2>
             <div class="bg-white rounded-xl shadow-md p-8 max-w-md mx-auto">
-                <p class="mb-6 text-center">Entre em contato  e fale com nosso setor comercial para orçamentos ou dúvidas:</p>
+                <p class="mb-6 text-center">Entre em contato e fale com nosso setor comercial para orçamentos ou
+                    dúvidas:</p>
                 <div class="text-center">
                     <a href="mailto:contato@s3eengenharia.com.br"
                         class="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primaryDark transition duration-300">
@@ -745,7 +913,8 @@
                 <div class="flex flex-col justify-center items-center gap-4 text-center">
                     <div>
                         <p class="text-sm text-gray-400">
-                            <span class="text-white">S3E Engenharia Serviços de Manutenção Elétrica LTDA</span><br> CNPJ: 16.625.927/0001-57
+                            <span class="text-white">S3E Engenharia Serviços de Manutenção Elétrica LTDA</span><br>
+                            CNPJ: 16.625.927/0001-57
                             © 2025 Todos os direitos reservados. <br>
                             <a href="https://www.linkedin.com/in/antonio-jdev/" class="text-white">Desenvolvido por
                                 AJR-Dev </a>
@@ -756,6 +925,68 @@
         </div>
     </footer>
     <!-- Scripts -->
+    <script>
+        // Script para navegação do carrossel
+        document.addEventListener('DOMContentLoaded', function () {
+            const carrossel = document.querySelector('#servicos .overflow-x-auto');
+            const prevBtn = document.querySelector('.servico-prev');
+            const nextBtn = document.querySelector('.servico-next');
+
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            // Navegação por botões
+            prevBtn.addEventListener('click', () => {
+                carrossel.scrollBy({ left: -300, behavior: 'smooth' });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                carrossel.scrollBy({ left: 300, behavior: 'smooth' });
+            });
+
+            // Navegação por arraste (para mobile/desktop)
+            carrossel.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - carrossel.offsetLeft;
+                scrollLeft = carrossel.scrollLeft;
+            });
+
+            carrossel.addEventListener('mouseleave', () => {
+                isDown = false;
+            });
+
+            carrossel.addEventListener('mouseup', () => {
+                isDown = false;
+            });
+
+            carrossel.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - carrossel.offsetLeft;
+                const walk = (x - startX) * 2;
+                carrossel.scrollLeft = scrollLeft - walk;
+            });
+
+            // Toque para dispositivos móveis
+            carrossel.addEventListener('touchstart', (e) => {
+                isDown = true;
+                startX = e.touches[0].pageX - carrossel.offsetLeft;
+                scrollLeft = carrossel.scrollLeft;
+            });
+
+            carrossel.addEventListener('touchend', () => {
+                isDown = false;
+            });
+
+            carrossel.addEventListener('touchmove', (e) => {
+                if (!isDown) return;
+                const x = e.touches[0].pageX - carrossel.offsetLeft;
+                const walk = (x - startX) * 2;
+                carrossel.scrollLeft = scrollLeft - walk;
+            });
+        });
+    </script>
 
     <script src="./assets/js/mudarSlide.js"></script>
 
