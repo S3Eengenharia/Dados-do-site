@@ -8,6 +8,10 @@ h1, h2, h3, h4 {
   margin-bottom: 0.5em;
 }
 
+.bg-primary {
+  background: linear-gradient(135deg, #1e3852 0%, #03080d 100%);
+}
+
 /* Classes utilitárias */
 .container {
   width: 100%;

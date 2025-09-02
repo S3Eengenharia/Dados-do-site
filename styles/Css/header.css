@@ -1,0 +1,195 @@
+ /* body {
+            background-color: #f5f7fa;
+            color: #333;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-title {
+            text-align: center;
+            margin: 30px 0;
+            color: #1e3852;
+        }
+        
+        .header-title h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header-title p {
+            font-size: 1.2rem;
+            color: #64748b;
+        }
+         */
+        /* Estilo do Header (mantido como antes) */
+        header {
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 0.8rem 0;
+            /* border-radius: 8px; */
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        /* Menu Desktop - Mantido como antes mas com hover estilo LD Andaimes */
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #1e3852;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+            text-decoration: none;
+        }
+        
+        /* Efeito Hover igual LD Andaimes */
+        .nav-link:hover {
+            color: #3B82F6;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3B82F6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .btn-orcamento {
+            background: #3B82F6;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .btn-orcamento:hover {
+            background: #2563EB;
+            transform: translateY(-2px);
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #1e3852;
+            cursor: pointer;
+        }
+        
+        /* Seção de Demonstração */
+        .demo-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .demo-section h2 {
+            color: #1e3852;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .demo-content {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .demo-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .demo-text p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .demo-image {
+            flex: 1;
+            min-width: 300px;
+            background: linear-gradient(135deg, #1e3852 0%, #3B82F6 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .header-title h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        .instructions {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            border-left: 4px solid #3B82F6;
+        }
+        
+        .instructions h3 {
+            color: #1e3852;
+            margin-bottom: 15px;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+/*         
+        code {
+            background: #e2e8f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        } */
