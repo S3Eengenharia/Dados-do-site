@@ -1,23 +1,22 @@
+/* Ícones Font Awesome (adicione no <head>) */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+
+/* Garante que a sidebar fique acima de outros elementos */
+
 #sidebar-mobile { 
+  will-change: transform;
   height: 100vh;
   top: 0;
+    z-index: 99999 !important;
+}
+#sidebar-overlay {
+  transition: opacity 0.3s ease;
+    z-index: 99998 !important;
 }
 
 .sidebar-open {
   transform: translateX(0) !important;
 }
 
-/* Ícones Font Awesome (adicione no <head>) */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
-
-/* Garante que a sidebar fique acima de outros elementos */
-#sidebar-mobile {
-  will-change: transform;
-  height: 100vh;
-  top: 0;
-}
-
 /* Transição suave para o overlay */
-#sidebar-overlay {
-  transition: opacity 0.3s ease;
-}

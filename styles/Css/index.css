@@ -26,20 +26,6 @@ h1, h2, h3, h4 {
   margin-bottom: 1rem;
 }
 
-#mobile-menu {
-  transition: all 0.3s ease;
-  transform-origin: top;
-}
-
-#mobile-menu:not(.hidden) {
-  animation: fadeInDown 0.3s ease-out;
-}
-
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 footer {
     background-image: radial-gradient(circle at 75% 30%, rgba(30, 56, 82, 0.15) 0%, transparent 50%);
 }

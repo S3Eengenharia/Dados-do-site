@@ -150,74 +150,73 @@
             <button id="sidebar-toggle" class="md:hidden text-primary text-2xl focus:outline-none">
                 ☰
             </button>
+        </nav>
+    </header>
 
             <!-- Sidebar -->
             <div id="sidebar-mobile"
-                class="fixed inset-y-0 left-0 w-64 bg-white shadow-xl transform -translate-x-full transition-all duration-300 ease-in-out z-50">
+                class="fixed inset-y-0 left-0 w-64 bg-primary shadow-xl transform -translate-x-full transition-all duration-300 ease-in-out ">
                 <div class="p-4 flex justify-end">
                     <button id="sidebar-close" class="text-primary text-2xl focus:outline-none">✕</button>
                 </div>
+                <img src="./src/images/logo-s3e-branca.png" alt="S3E Engenharia" class="h-16 ml-4">
+
                 <nav class="mt-8">
                     <ul class="space-y-4 px-4">
                         <li>
-                            <a href="index.html"
-                                class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                            <a href="index.html" class="flex items-center gap-4 text-lg text-white hover:text-blue-600">
                                 <i class="fas fa-home w-6 text-center"></i>
                                 <span>Home</span>
                             </a>
                         </li>
                         <li>
                             <a href="/Sobre.html"
-                                class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                class="flex items-center gap-4 text-lg text-white hover:text-blue-600">
                                 <i class="fas fa-info-circle"></i>
                                 <span>Sobre Nós</span>
                             </a>
                         </li>
                         <li>
                             <a href="servicos.html"
-                                class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                class="flex items-center gap-4 text-lg text-white hover:text-blue-600">
                                 <i class="fas fa-tools w-6 text-center"></i>
                                 <span>Serviços</span>
                             </a>
                         </li>
                         <li>
                             <a href="contato.html"
-                                class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                class="flex items-center gap-4 text-lg text-white hover:text-blue-600">
                                 <i class="fas fa-envelope w-6 text-center"></i>
                                 <span>Contato</span>
                             </a>
                         </li>
                         <li>
                             <a href="https://wa.me/554730838361/"
-                                class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                class="flex items-center gap-4 text-lg text-white hover:text-blue-600">
                                 <i class="fab fa-whatsapp w-6 text-center"></i>
                                 <span>Tire Dúvidas</span>
                             </a>
                         </li>
                         <li>
                             <a href="https://www.instagram.com/s3eengenhariaeletrica/"
-                                class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                class="flex items-center gap-4 text-lg text-white hover:text-blue-600">
                                 <i class="fab fa-instagram w-6 text-center"></i>
                                 <span>Instagram</span>
                             </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/s3eengenharia"
-                                class="flex items-center gap-4 text-lg text-gray-700 hover:text-primary">
+                                class="flex items-center gap-4 text-lg text-white hover:text-blue-600">
                                 <i class="fab fa-facebook w-6 text-center"></i>
                                 <span>Facebook</span>
                             </a>
                         </li>
                     </ul>
-                </nav>
+                
             </div>
-
-            <!-- Overlay -->
-            <div id="sidebar-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
-    </header>
-
-    <!-- Hero Section com Carrossel (Cobrindo 100vh) -->
     
+    <!-- Hero Section com Carrossel (Cobrindo 100vh) -->
+
     <!-- Hero Section com Carrossel -->
     <section class="relative h-screen overflow-hidden">
         <!-- Container do Carrossel -->
@@ -233,7 +232,7 @@
                 style="background-image: url('./src/images/hero4.jpg')"></div>
 
             <!-- Overlay escuro -->
-            <div class="absolute inset-0 h-screen bg-black/50"></div>
+            <div class="absolute inset-0 h-screen bg-black/60"></div>
         </div>
 
         <!-- Conteúdo Central -->
@@ -628,7 +627,7 @@
     <!-- <div class="absolute inset-0 bg-gradient-to-b from-gray-100 to-blue-700 opacity-95"></div> -->
     <!-- Conteúdo -->
     <section id="informacoes" class="py-16 px-6  bg-primary relative overflow-hidden">
-       
+
         <div class="absolute inset-0 bg-primary/40 z-0"></div>
 
         <div class="container mx-auto max-w-6xl relative z-10">
@@ -745,22 +744,7 @@
             </div>
         </div>
     </section>
-    <!-- Contato -->
-    <section id="contato" class="bg-lightGray py-16 px-6">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl font-bold text-center mb-8 text-primary">Contato</h2>
-            <div class="bg-white rounded-xl shadow-md p-8 max-w-md mx-auto">
-                <p class="mb-6 text-center">Entre em contato e fale com nosso setor comercial para orçamentos ou
-                    dúvidas:</p>
-                <div class="text-center">
-                    <a href="mailto:contato@s3eengenharia.com.br"
-                        class="inline-block bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primaryDark transition duration-300">
-                        contato@s3eengenharia.com.br
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
@@ -783,6 +767,10 @@
                         <a href="https://wa.me/554730838361/" class="text-gray-400 hover:text-white transition-colors"
                             aria-label="WhatsApp">
                             <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/s3eengenharia"
+                            class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook text-xl"></i>
                         </a>
                     </div>
                 </div>
@@ -858,67 +846,29 @@
     </footer>
     <!-- Scripts -->
     <script>
-        // Script para navegação do carrossel
         document.addEventListener('DOMContentLoaded', function () {
-            const carrossel = document.querySelector('#servicos .overflow-x-auto');
-            const prevBtn = document.querySelector('.servico-prev');
-            const nextBtn = document.querySelector('.servico-next');
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const sidebarClose = document.getElementById('sidebar-close');
+            const sidebarMobile = document.getElementById('sidebar-mobile');
+            const sidebarOverlay = document.getElementById('sidebar-overlay');
 
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
-            // Navegação por botões
-            prevBtn.addEventListener('click', () => {
-                carrossel.scrollBy({ left: -300, behavior: 'smooth' });
+            sidebarToggle.addEventListener('click', function () {
+                sidebarMobile.classList.add('active');
+                sidebarOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
             });
 
-            nextBtn.addEventListener('click', () => {
-                carrossel.scrollBy({ left: 300, behavior: 'smooth' });
-            });
+            function closeSidebar() {
+                sidebarMobile.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
 
-            // Navegação por arraste (para mobile/desktop)
-            carrossel.addEventListener('mousedown', (e) => {
-                isDown = true;
-                startX = e.pageX - carrossel.offsetLeft;
-                scrollLeft = carrossel.scrollLeft;
-            });
-
-            carrossel.addEventListener('mouseleave', () => {
-                isDown = false;
-            });
-
-            carrossel.addEventListener('mouseup', () => {
-                isDown = false;
-            });
-
-            carrossel.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - carrossel.offsetLeft;
-                const walk = (x - startX) * 2;
-                carrossel.scrollLeft = scrollLeft - walk;
-            });
-
-            // Toque para dispositivos móveis
-            carrossel.addEventListener('touchstart', (e) => {
-                isDown = true;
-                startX = e.touches[0].pageX - carrossel.offsetLeft;
-                scrollLeft = carrossel.scrollLeft;
-            });
-
-            carrossel.addEventListener('touchend', () => {
-                isDown = false;
-            });
-
-            carrossel.addEventListener('touchmove', (e) => {
-                if (!isDown) return;
-                const x = e.touches[0].pageX - carrossel.offsetLeft;
-                const walk = (x - startX) * 2;
-                carrossel.scrollLeft = scrollLeft - walk;
-            });
+            sidebarClose.addEventListener('click', closeSidebar);
+            sidebarOverlay.addEventListener('click', closeSidebar);
         });
     </script>
+    <script src="./assets/js/navegationCarroussel.js"></script>
 
     <script src="./assets/js/mudarSlide.js"></script>
     <!-- Script do Menu Mobile -->
